@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Francois_One';
+    src: url('/public/fonts/Francois_One/FrancoisOne-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Gilda_Display';
+    src: url('/public/fonts/Gilda_Display/GildaDisplay-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+  }
+
+
+
+  .font_gilda_display {
+    font-family: 'Gilda_Display';
+  }
+  .font_francois_one {
+    font-family: 'Francois_One';
+  }
+  .font_quicksand {
+    font-family: 'Quicksand';
+  }

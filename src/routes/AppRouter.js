@@ -1,41 +1,49 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { MarvelScreen } from "../components/marvel/MarvelScreen";
-import { DcScreen } from "../components/dc/DcScreen";
-import { SearchScreen } from "../components/search/SearchScreen";
-import { LoginScreen } from "../components/login/LoginScreen";
-import ErrorPage from "../components/error/ErrorPage";
-import { HeroesApp } from "../HeroesApp";
-import { HeroScreen } from "../components/hero/HeroScreen";
+import { App } from "../App";
+
+import { Girls } from "../components/categories/girls/Girls";
+import { Boys } from "../components/categories/boys/Boys";
+import { Babies } from "../components/categories/babies/Babies";
+import { Home } from "../components/categories/home/Home";
+import { Play } from "../components/categories/play/Play";
+import { KidScreen } from "../components/kidsrus/KidScreen";
+
+import ErrorPage from "../components/errorPage/ErrorPage";
+
+
 
 export const router = createBrowserRouter(
   [
     {
-      path: "/login",
-      element: <LoginScreen />,
-    },
-    {
       path: "/",
-      element: <HeroesApp />,
+      element: <App />,
       errorElement: <ErrorPage />,
-      
+
        children: [
-   // },
     {
-      path: "marvel",
-      element: <MarvelScreen />,
+      path: "girls",
+      element: <Girls />,
     },
     {
-      path: "dc",
-      element: <DcScreen />,
+      path: "/boys",
+      element: <Boys />,
     },
     {
-      path: "search",
-      element: <SearchScreen />,
+      path: "babies",
+      element: <Babies />,
     },
     {
-      path: "hero/:heroeId",
-      element: <HeroScreen />,
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "play",
+        element: <Play />,
+      },
+    {
+      path: "kids/:kidsId",
+      element: <KidScreen />,
     },
     
      ],
