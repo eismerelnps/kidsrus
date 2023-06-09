@@ -1,17 +1,19 @@
 import React from "react";
 
+import "./searchbar.css";
+
 export const SearchBar = () => {
   return (
-    <div className="mb-5">
+    <div className="mb-5 searchBar_container ">
       <form className="d-flex" role="search">
         <input
-          className="form-control me-2"
+          className=" form-control border-0 me-2 font_quicksand"
           type="search"
           placeholder="Search products..."
           aria-label="Search"
         />
-
-        <i class="fa-light fa-magnifying-glass"></i>
+        <div className="fa-magnifying-glass-container p-1">
+        <i class="fa-solid fa-magnifying-glass text-light p-2"></i>        </div>
         {/* <button className="btn btn-outline-success" type="submit">
         
     </button> */}
