@@ -5,9 +5,13 @@ import { NewArrivals } from "./components/newArrivals/NewArrivals";
 import './app.css';
 import { Header } from "./components/ui/Header";
 import { Navbar } from "./components/ui/NavBar";
+import { randomDate } from "./helpers/randomDate";
 
 
 export const App = () => {
+
+  const date = randomDate();
+  console.log(date);
   return (
     <>
      <div className="bg-color-orange">
@@ -30,7 +34,7 @@ export const App = () => {
          <h1 className="font_gilda_display"> Gilda_Display</h1>
         <h1 className="font_francois_one"> Francois_One</h1>
         <h1 className="font_quicksand"> Quicksand</h1>
-        <h1 className="font_quicksand"> Search Products</h1>
+        <h1 className="font_quicksand"> aaa</h1>
       </div>
      
     </>

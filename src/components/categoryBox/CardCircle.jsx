@@ -6,8 +6,9 @@ export const CardCircle = ({ id, title, navTo }) => {
     <div class="card  border-0 mx-5">
       <img src={`${process.env.PUBLIC_URL}./assets/main/navbar/${id}.png`} class="card-img-top" alt={title} />
       <div class="card-body text-center">
-        <NavLink to={navTo}>
-          <p class=" font_francois_one color_mate_blue">{title}</p>
+        <NavLink 
+        className={ ({ isActive }) => "font_francois_one color_mate_blue text-decoration-none" + (isActive ? 'active' : '') }
+        to={navTo}>{title}
         </NavLink>
       </div>
     </div>
