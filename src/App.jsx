@@ -10,7 +10,7 @@ import { Navbar } from "./components/ui/NavBar";
 export const App = () => {
   return (
     <>
-     <div className="color-bg-orange">
+     <div className="bg-color-orange">
         <div className="container px-5 text-center">
           <p className="text-light font_quicksand ">
             20% off all kidswear + free shipping when you spend $60 or more
@@ -19,6 +19,7 @@ export const App = () => {
       </div>
       <div className="container mx-5 px-5">
       <Header />
+      
       <div className="container">
         <Navbar />
         <NewArrivals />

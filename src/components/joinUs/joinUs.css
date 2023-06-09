@@ -1,0 +1,10 @@
+.joinus-input {
+    border: 2px dashed white;
+}
+.joinus-btn-container {
+    background-color: white;
+}
+.joinus-btn {
+    border: 2px dashed #e9672fd4;
+    border-radius: 0;
+}
