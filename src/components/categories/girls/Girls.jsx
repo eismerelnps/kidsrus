@@ -1,5 +1,9 @@
+import { ProductList } from "../../product/ProductList"
+
 export const Girls = () => {
   return (
-    <div>Girls</div>
+    <div>
+    <ProductList category={'For Girls'}/>
+  </div>
   )
 }

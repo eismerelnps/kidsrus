@@ -4,7 +4,7 @@ import './joinUs.css'
 
 export const JoinUs = () => {
   return (
-    <div className="bg-color-orange px-5 pb-2 pt-4 mb-5">
+    <div className="bg_color_orange px-5 pb-2 pt-4 mb-5">
       <div className="card-body">
         <h2 className="card-title text-light font_gilda_display text-center">Join Our <br/> Newsletter</h2>
         <form className="row">

@@ -1,7 +1,9 @@
-import React from 'react'
+import { ProductList } from "../../product/ProductList";
 
 export const Play = () => {
   return (
-    <div>Play</div>
-  )
-}
+    <div>
+      <ProductList category={"For Play"} />
+    </div>
+  );
+};

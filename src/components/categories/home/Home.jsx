@@ -1,7 +1,9 @@
-import React from 'react'
+import { ProductList } from "../../product/ProductList"
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <ProductList category={'For Home'}/>
+    </div>
   )
 }
