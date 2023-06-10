@@ -13,13 +13,13 @@ export const Header = () => {
           alt="page_logo"
         />
       </div>
-      <ul class="nav justify-content-center mb-5">
+      <ul className="nav justify-content-center mb-5">
         {nav.map(({ title, navTo }) => (
           <NavItem key={title} title={title} navTo={navTo} />
         ))}
-        <i class="fa-regular fa-heart p-2 color_mate_blue"></i>
-        <i class="fa-solid fa-cart-shopping p-2 color_mate_blue"></i>
-        <i class="fa-solid fa-magnifying-glass p-2 color_mate_blue"></i>
+        <i className="fa-regular fa-heart p-2 color_mate_blue"></i>
+        <i className="fa-solid fa-cart-shopping p-2 color_mate_blue"></i>
+        <i className="fa-solid fa-magnifying-glass p-2 color_mate_blue"></i>
       </ul>
 
       <div className="row">
@@ -30,11 +30,11 @@ export const Header = () => {
               className="img-fluid"
               alt="page_logo"
             />
-            <div class="position-absolute bottom-0 start-0 p-3">
-              <h1 class="text-white">Jumpsuits</h1>
-              <p class="text-white mb-3">Confortable clothes for you little babies</p>
+            <div className="position-absolute bottom-0 start-0 p-3">
+              <h1 className="text-white">Jumpsuits</h1>
+              <p className="text-white mb-3">Confortable clothes for you little babies</p>
               <div className="bg-light p-1 d-inline-block">
-              <button class="discover-btn btn color_mate_blue font_francois_one">DISCOVER</button>
+              <button className="discover-btn btn color_mate_blue font_francois_one">DISCOVER</button>
               </div>
             </div>
           </div>

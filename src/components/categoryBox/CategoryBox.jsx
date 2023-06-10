@@ -13,7 +13,7 @@ export const CategoryBox = () => {
         <ul className="category_box_body list-group list-group-flush p-3">
           {
           categotyBox.map(({ id, title, navTo, amount }) => (
-            <li className="list-group-item color_mate_blue ">
+            <li key={title} className="list-group-item color_mate_blue ">
               <div className="row bg-purple">
                 <NavLink className="nav-item nav-link col-10" to={navTo}>
                   {title}

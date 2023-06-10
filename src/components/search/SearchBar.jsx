@@ -13,7 +13,7 @@ export const SearchBar = () => {
           aria-label="Search"
         />
         <div className="fa-magnifying-glass-container p-1">
-        <i class="fa-solid fa-magnifying-glass text-light p-2"></i>        </div>
+        <i className="fa-solid fa-magnifying-glass text-light p-2"></i>        </div>
         {/* <button className="btn btn-outline-success" type="submit">
         
     </button> */}

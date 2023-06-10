@@ -10,9 +10,9 @@ export const NewArrivals = () => {
 
   return (
     <div className="container-fluid">
-      <div class="d-flex flex-column justify-content-center align-items-center text-center mb-5">
+      <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">NEW ARRIVALS</h4>
-        <img src={imagePath} class="img" alt="" />
+        <img src={imagePath} className="img" alt="" />
       </div>
       <div className="row">
         <div className="col-3">
