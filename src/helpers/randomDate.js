@@ -4,7 +4,7 @@ export const randomDate = () => {
   const milisegundosEntreFechas = fechaFinal.getTime() - fechaInicial.getTime();
   const milisegundosAleatorios = Math.random() * milisegundosEntreFechas;
   const fechaRandom = new Date(fechaInicial.getTime() + milisegundosAleatorios);
-  return fechaRandom.toLocaleDateString('en-US').toString;
+  return fechaRandom.toLocaleDateString('en-US');
   }
   
  

@@ -15,7 +15,7 @@ export const Header = () => {
       </div>
       <ul class="nav justify-content-center mb-5">
         {nav.map(({ title, navTo }) => (
-          <NavItem title={title} navTo={navTo} />
+          <NavItem key={title} title={title} navTo={navTo} />
         ))}
         <i class="fa-regular fa-heart p-2 color_mate_blue"></i>
         <i class="fa-solid fa-cart-shopping p-2 color_mate_blue"></i>
