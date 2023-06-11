@@ -13,6 +13,8 @@ export const Header = () => {
           alt="page_logo"
         />
       </div>
+
+      
       <ul className="nav justify-content-center mb-5">
         {nav.map(({ title, navTo }) => (
           <NavItem key={title} title={title} navTo={navTo} />

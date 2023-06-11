@@ -11,7 +11,10 @@
     src: url('/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
   }
 
-
+  .border_gray_dashed_own  {
+    border: 1px dashed #525252da;
+    border-radius: 0;
+}
   .border_blue_dashed_own  {
     border: 1px dashed #29458bda;
     border-radius: 0;

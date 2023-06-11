@@ -7,54 +7,49 @@ import { Boys } from "../components/categories/boys/Boys";
 import { Babies } from "../components/categories/babies/Babies";
 import { Home } from "../components/categories/home/Home";
 import { Play } from "../components/categories/play/Play";
-import { KidScreen } from "../components/kidsrus/KidScreen";
 
 import ErrorPage from "../components/errorPage/ErrorPage";
 import { ProductRandom } from "../components/product/ProductRandom";
-
-
+import { ProductScreen } from "../components/product/ProductScreen";
 
 export const router = createBrowserRouter(
   [
+    {
+      path: "product/:productsId",
+      element: <ProductScreen />,
+    },
     {
       path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
 
-       children: [
+      children: [
         {
           path: "/",
-          element: <ProductRandom  />,
+          element: <ProductRandom />,
         },
-    {
-      path: "girls",
-      element: <Girls />,
+        {
+          path: "girls",
+          element: <Girls />,
+        },
+        {
+          path: "/boys",
+          element: <Boys />,
+        },
+        {
+          path: "babies",
+          element: <Babies />,
+        },
+        {
+          path: "home",
+          element: <Home />,
+        },
+        {
+          path: "play",
+          element: <Play />,
+        },
+      ],
     },
-    {
-      path: "/boys",
-      element: <Boys />,
-    },
-    {
-      path: "babies",
-      element: <Babies />,
-    },
-    {
-        path: "home",
-        element: <Home />,
-      },
-      {
-        path: "play",
-        element: <Play />,
-      },
-    {
-      path: "kids/:kidsId",
-      element: <KidScreen />,
-    },
-    
-     ],
-     
-     },
-     
   ],
   {
     // basename: '/'

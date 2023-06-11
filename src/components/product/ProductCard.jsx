@@ -1,6 +1,7 @@
 import React from "react";
 import { Favorite } from "../buttons/Favorite";
 import { FavCartSearch } from "../buttons/FavCartSearch";
+import { Link } from "react-router-dom";
 
 export const ProductCard = ({
   title,
@@ -34,14 +35,8 @@ export const ProductCard = ({
                   OUT OF STOCK
                 </span>
               </div>
-              {
-                stockAmount === 0 
-                &&(<Favorite id={id} /> )
-              },
-               {
-                stockAmount > 0 
-                &&(<FavCartSearch /> )
-              }
+              {stockAmount === 0 && <Favorite id={id} />},
+              {stockAmount > 0 && <FavCartSearch />}
             </>
           )}
         </div>
@@ -50,7 +45,9 @@ export const ProductCard = ({
             {category}
           </h5>
           <h5 className="card-title color_mate_blue font_gilda_display  mb-2">
-            {title}
+            <Link className="text-danger float-end" to={`/product/${id}`}>
+              {title}
+            </Link>
           </h5>
           {stockAmount !== 0 && (
             <p className="card-text color_mate_blue font_francois_one">
