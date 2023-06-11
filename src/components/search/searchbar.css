@@ -1,10 +1,10 @@
 .searchBar_container {
     border: 1px dashed #8080809d;
 }
-.fa-magnifying-glass-container {
+.fa-search-container {
     background-color: #ff4d00ce;
     
 }
-.fa-magnifying-glass {
+.fa-search {
     border: 1px dashed rgb(255, 255, 255);
 }

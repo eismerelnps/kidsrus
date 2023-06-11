@@ -1,10 +1,24 @@
-.joinus-input {
-    border: 2px dashed white;
+.joinus_input {
+  border: 2px dashed white;
+  background: transparent;
 }
+.joinus_input::placeholder {
+  color: white;
+}
+.joinus_input:focus {
+  color: white;
+  border: 2px dashed white;
+}
+
 .joinus-btn-container {
-    background-color: white;
+  background-color: white;
 }
+
 .joinus-btn {
-    border: 2px dashed #e9672fd4;
-    border-radius: 0;
+  border: 2px dashed #e9672fd8;
+  border-radius: 0;
+}
+.joinus-btn:hover {
+  border: 2px dashed #e9672fd8;
+  border-radius: 0;
 }

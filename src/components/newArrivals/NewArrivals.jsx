@@ -3,6 +3,7 @@ import { SearchBar } from "../search/SearchBar";
 import { CategoryBox } from "../categoryBox/CategoryBox";
 import { Outlet } from "react-router-dom";
 import { JoinUs } from "../joinUs/JoinUs";
+import { Instagram } from "../instagram/Instagram";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";
@@ -24,6 +25,7 @@ export const NewArrivals = () => {
           <Outlet />
         </div>
       </div>
+      <Instagram />
     </div>
   );
 };

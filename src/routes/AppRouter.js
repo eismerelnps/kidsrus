@@ -10,6 +10,7 @@ import { Play } from "../components/categories/play/Play";
 import { KidScreen } from "../components/kidsrus/KidScreen";
 
 import ErrorPage from "../components/errorPage/ErrorPage";
+import { ProductRandom } from "../components/product/ProductRandom";
 
 
 
@@ -21,6 +22,10 @@ export const router = createBrowserRouter(
       errorElement: <ErrorPage />,
 
        children: [
+        {
+          path: "/",
+          element: <ProductRandom  />,
+        },
     {
       path: "girls",
       element: <Girls />,

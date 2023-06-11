@@ -12,8 +12,8 @@ export const SearchBar = () => {
           placeholder="Search products..."
           aria-label="Search"
         />
-        <div className="fa-magnifying-glass-container p-1">
-        <i className="fa-solid fa-magnifying-glass text-light p-2"></i>        </div>
+        <div className="fa-search-container p-1">
+        <i className="fa-search fa-solid fa-magnifying-glass text-light p-2"></i>        </div>
         {/* <button className="btn btn-outline-success" type="submit">
         
     </button> */}
