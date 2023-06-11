@@ -44,8 +44,9 @@ export const ProductCard = ({
           <h5 className="card-subtitle color_orange mb-2 font_francois_one">
             {category}
           </h5>
+          
           <h5 className="card-title color_mate_blue font_gilda_display  mb-2">
-            <Link className="text-danger float-end" to={`/product/${id}`}>
+          <Link className=" color_light_blue text-decoration-none" to={`/product/${id}`}>
               {title}
             </Link>
           </h5>

@@ -1,8 +1,10 @@
 import React from "react";
+import { Wave } from "../wave/Wave";
 
 export const Footer = () => {
   return (
     <div className="bg_color_dark_yellow mt-5 container-fluid">
+     
       <div className="mt-5 text-center">
         <img
           src={`${process.env.PUBLIC_URL}./assets/main/logo(1).png`}
