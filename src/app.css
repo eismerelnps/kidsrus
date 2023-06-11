@@ -12,6 +12,14 @@
   }
 
 
+  .border_blue_dashed_own  {
+    border: 1px dashed #29458bda;
+    border-radius: 0;
+}
+.border_white_dashed_own  {
+  border: 3px dashed #ffffff;
+  border-radius: 0;
+}
 
   .font_gilda_display {
     font-family: 'Gilda_Display';
@@ -32,9 +40,16 @@
   .bg_color_orange {
     background-color: #e9672fd4;
   }
+  .bg_color_dark_orange {
+    background-color: #e05a35d2;
+  }
+  .color_dark_orange {
+    color: #e05a35d2;
+  }
   .color_orange {
     color: #e9672fd4;
   }
+  
 
   .active {
     opacity: 0.8;
