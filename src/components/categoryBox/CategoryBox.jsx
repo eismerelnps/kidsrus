@@ -7,7 +7,10 @@ import "./categoryBox.css";
 
 export const CategoryBox = () => {
   return (
-    <div className="mb-5">
+    <div className="mb-5 "
+    style={{cursor: "pointer"}}
+
+    >
       <h1 className="mb-4 font_francois_one color_mate_blue">CATEGORIES</h1>
       <div className="font_francois_one">
         <ul className="category_box_body list-group list-group-flush p-3">

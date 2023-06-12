@@ -20,8 +20,9 @@ export const ProductCard = ({
 
   const imagePath = `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`;
   const hoverImagePath = images[0].img2
-  ? `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img2}`
-  : imagePath;
+    ? `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img2}`
+    : imagePath;
+
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -29,43 +30,56 @@ export const ProductCard = ({
   const handleMouseLeave = () => {
     setHovered(false);
   };
+
+  const handleAddToCart = () => {
+    console.log('Add to cart');
+    // Realizar acciones necesarias para agregar el artículo al carrito
+  };
+
   return (
-    <div 
-    className="col-6 col-xl-4 mt-1 mb-5  "
-    onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}
-   
+    <div
+      className="col-6 col-xl-4 mt-1 mb-5"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="card border-0 rounded-0">
         <div className="position-relative">
           <img
-         
             src={hovered ? hoverImagePath : imagePath}
-            className="card-img-top border-0 rounded-0 mb-2"
+            className="card-img-top border-0 rounded-0 mb-2 animate__animated animate__fadeIn"
             alt={title}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            style={{cursor: "pointer"}}
           />
 
-          {stockAmount === 0 && (
+          { stockAmount === 0 ? (
             <>
-              <div className=" position-absolute top-0 end-0 m-3">
-                <span className="outOfStockBtn  bg-light rounded-5 color_light_blue font_francois_one px-3 py-1">
+              <div className="position-absolute top-0 end-0 m-3">
+                <span className="outOfStockBtn bg-light rounded-5 color_light_blue font_francois_one px-3 py-1">
                   OUT OF STOCK
                 </span>
               </div>
-              {stockAmount === 0 && <Favorite id={id} />},
-              {stockAmount > 0 && <FavCartSearch />}
+              {
+                hovered &&  <Favorite />
+              }
+               
+              
             </>
-          )}
+          ) : hovered && stockAmount > 0 ? (
+            <FavCartSearch />
+          ) : null}
         </div>
         <div className="card-body text-center">
           <h5 className="card-subtitle color_orange mb-2 font_francois_one">
             {category}
           </h5>
-          
-          <h5 className="card-title color_mate_blue font_gilda_display  mb-2">
-          <Link className=" color_light_blue text-decoration-none" to={`/product/${id}`}>
+
+          <h5 className="card-title color_mate_blue font_gilda_display mb-2">
+            <Link
+              className="color_light_blue text-decoration-none"
+              to={`/product/${id}`}
+            >
               {title}
             </Link>
           </h5>
