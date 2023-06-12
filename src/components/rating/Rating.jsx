@@ -1,23 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export const Rating = ({ value }) => {
-    const stars = [];
-  const fullStars = Math.floor(value);
-  const hasHalfStar = value % 1 !== 0;
+export const Rating = ({ max, value }) => {
+  const stars = new Array(max).fill(<i className="fa-solid fa-star color_light_gray"></i>);
 
-  for (let i = 0; i < fullStars; i++) {
-    stars.push(<i class="fa-solid fa-star color_dark_orange"></i>);
+  for (let i = 0; i < Math.floor(value); i++) {
+    stars[i] = <i key={i} className="fa-solid fa-star color_orange"></i>;
   }
 
-  if (hasHalfStar) {
-    stars.push(<i class="fa-solid fa-star color_dark_orange"></i>);
-  }
-
-  while (stars.length < 5) {
-    stars.push(<i class="fa-solid fa-star color_dark_orange"></i>);
-  }
-
-  return (
-   <div>{stars}</div>
-  )
-}
+  return <div>{stars}</div>;
+};

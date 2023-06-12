@@ -4,6 +4,8 @@ import { CategoryBox } from "../categoryBox/CategoryBox";
 import { Outlet } from "react-router-dom";
 import { JoinUs } from "../joinUs/JoinUs";
 import { Instagram } from "../instagram/Instagram";
+import { Home } from "./home/Home";
+import { Navbar } from "./navbar/NavBar";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";
@@ -11,6 +13,8 @@ export const NewArrivals = () => {
 
   return (
     <div className="container-fluid">
+      <Home />
+      <Navbar />
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">NEW ARRIVALS</h4>
         <img src={imagePath} className="img" alt="" />

@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { navbar } from "../../data/navbar";
-import { CardCircle } from "../categoryBox/CardCircle";
+import { navbar } from "../../../data/navbar";
+import { CardCircle } from "../../categoryBox/CardCircle";
 import { key } from "localforage";
 
 export const Navbar = () => {

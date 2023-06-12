@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Favorite } from "../buttons/Favorite";
 import { FavCartSearch } from "../buttons/FavCartSearch";
 import { Link } from "react-router-dom";
@@ -16,16 +16,35 @@ export const ProductCard = ({
   images,
   reviews,
 }) => {
-  const imagePath = `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`;
+  const [hovered, setHovered] = useState(false);
 
+  const imagePath = `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`;
+  const hoverImagePath = images[0].img2
+  ? `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img2}`
+  : imagePath;
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
   return (
-    <div className="col-6 col-xl-4 mt-1 mb-5  ">
+    <div 
+    className="col-6 col-xl-4 mt-1 mb-5  "
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+   
+    >
       <div className="card border-0 rounded-0">
         <div className="position-relative">
           <img
-            src={imagePath}
+         
+            src={hovered ? hoverImagePath : imagePath}
             className="card-img-top border-0 rounded-0 mb-2"
             alt={title}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           />
 
           {stockAmount === 0 && (

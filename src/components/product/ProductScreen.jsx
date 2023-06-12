@@ -7,6 +7,9 @@ import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 export const ProductScreen = () => {
   const navigate = useNavigate();
   const { productsId } = useParams();
+  
+  const params = useParams();
+  console.log(params)
 
   const product = useMemo(() => getProductById(productsId), [productsId]);
 
@@ -66,16 +69,16 @@ export const ProductScreen = () => {
 
           <div className="border_gray_dashed_own p-4 my-4">
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">
+              <li key={'sku'} className="list-group-item">
                 {" "}
                 <b>SKU: </b>
                 {id}
               </li>
-              <li className="list-group-item">
+              <li key={'category'} className="list-group-item">
                 <b>Category: </b>
                 {category}
               </li>
-              <li className="list-group-item">
+              <li key={'tags'} className="list-group-item">
                 <b>Tags: </b>
                 {tags}
               </li>
@@ -100,13 +103,13 @@ export const ProductScreen = () => {
           alt=""
         />
         {reviews.map((review) => (
-          <div className="d-flex">
+          <div key={review.id} className="d-flex">
             <p className="justify-content-start">
               {reviews.length} review for {title}
             </p>
             <div className="border_gray_dashed_own row">
               <div className="col-2">
-              <span class="placeholder col-12 bg-dark h-50"></span>
+              <span className="placeholder col-12 bg-dark h-50"></span>
               </div>
               <div className="col-10">
                 {" "}

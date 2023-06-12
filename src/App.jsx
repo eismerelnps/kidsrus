@@ -4,10 +4,11 @@ import { NewArrivals } from "./components/newArrivals/NewArrivals";
 
 import './app.css';
 import { Header } from "./components/ui/Header";
-import { Navbar } from "./components/ui/NavBar";
+import { Navbar } from "./components/newArrivals/navbar/NavBar";
 import { randomDate } from "./helpers/randomDate";
 import { Footer } from "./components/ui/Footer";
 import { CookiesAd } from "./components/ui/CookiesAd";
+import { Rating } from "./components/rating/Rating";
 
 
 export const App = () => {
@@ -27,7 +28,6 @@ export const App = () => {
       <Header />
       
       <div className="container">
-        <Navbar />
         <NewArrivals />
         
       </div>

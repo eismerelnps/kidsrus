@@ -49,12 +49,17 @@
   .bg_color_dark_yellow {
     background-color: #dca547;
   }
+
   .color_dark_orange {
     color: #e05a35d2;
   }
   .color_orange {
     color: #e9672fd4;
   }
+  .color_light_gray {
+    color: #52525240;
+  }
+  
   
 
   .active {
