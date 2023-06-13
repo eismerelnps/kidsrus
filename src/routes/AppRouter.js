@@ -58,6 +58,6 @@ export const router = createBrowserRouter(
    
   ],
   {
-    // basename: '/'
+     basename: '/Kids-r-US-Frontend'
   }
 );
