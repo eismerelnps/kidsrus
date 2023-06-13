@@ -11,22 +11,27 @@ import { Play } from "../components/categories/play/Play";
 import ErrorPage from "../components/errorPage/ErrorPage";
 import { ProductRandom } from "../components/product/ProductRandom";
 import { ProductScreen } from "../components/product/productScreen/ProductScreen";
+import { NewArrivals } from "../components/newArrivals/NewArrivals";
 
 export const router = createBrowserRouter(
   [
     {
       path: "product/:productsId",
       element: <ProductScreen  />,
+      errorElement: <ErrorPage />,
     },
+  
     {
       path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
 
       children: [
+       
+       
         {
           path: "/",
-          element: <ProductRandom />,
+          element:  <NewArrivals />,
         },
         {
           path: "girls",
@@ -50,6 +55,7 @@ export const router = createBrowserRouter(
         },
       ],
     },
+   
   ],
   {
     // basename: '/'

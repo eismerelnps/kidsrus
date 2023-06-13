@@ -1,7 +1,7 @@
 import React from "react";
 import { SearchBar } from "../search/SearchBar";
 import { CategoryBox } from "../categoryBox/CategoryBox";
-import { Outlet } from "react-router-dom";
+import { Outlet, RouterProvider } from "react-router-dom";
 import { JoinUs } from "../joinUs/JoinUs";
 import { Instagram } from "../instagram/Instagram";
 import { Home } from "./home/Home";

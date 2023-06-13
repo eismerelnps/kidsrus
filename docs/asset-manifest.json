@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.083217fa.css",
+    "main.js": "/static/js/main.8b168234.js",
+    "static/media/Quicksand-VariableFont_wght.ttf": "/static/media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf",
+    "static/media/FrancoisOne-Regular.ttf": "/static/media/FrancoisOne-Regular.eac14538475d205a7761.ttf",
+    "static/media/GildaDisplay-Regular.ttf": "/static/media/GildaDisplay-Regular.5a052d3714f135fceb4f.ttf",
+    "index.html": "/index.html",
+    "static/media/wave.svg": "/static/media/wave.1569d1669381e5a5aec2.svg",
+    "main.083217fa.css.map": "/static/css/main.083217fa.css.map",
+    "main.8b168234.js.map": "/static/js/main.8b168234.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.083217fa.css",
+    "static/js/main.8b168234.js"
+  ]
+}

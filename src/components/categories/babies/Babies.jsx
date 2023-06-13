@@ -1,10 +1,10 @@
-import React from 'react'
-import { ProductList } from '../../product/ProductList'
+import React from "react";
+import { ProductList } from "../../product/ProductList";
 
 export const Babies = () => {
   return (
     <div>
-      <ProductList category={'For Babies'}/>
+      <ProductList category={"For Babies"} />
     </div>
-  )
-}
+  );
+};
