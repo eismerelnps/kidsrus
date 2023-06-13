@@ -13,27 +13,29 @@ export const BestSellers = () => {
       <div className="font_francois_one">
         <ul className="border_gray_dashed_own list-group list-group-flush p-3">
           {products.map(({ id, rating, title, price, images, category }, i) => (
-            <li key={i} className="">
-              <div>
+            <li key={i} className="mb-3">
+              <div className="d-flex align-items-center">
                 <div className="col-4">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/${category}/${images[0].img1}`}
-                    className="img mt-5 mb-5 circle"
-                    alt="page_logo"
-                  />
+                  <div className="rounded-circle overflow-hidden" style={{ width: "80px", height: "80px" }}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/${category}/${images[0].img1}`}
+                      className="img-fluid"
+                      alt="page_logo"
+                    />
+                  </div>
                 </div>
                 <div className="col-8">
                   <div className="d-flex flex-column">
-                  <h5 className="card-title color_mate_blue font_gilda_display mb-2">
-            <Link
-              style={{cursor: "default"}}
-              className="color_light_blue text-decoration-none"
-              to={`/product/${id}`}
-            >
-              {title}
-            </Link>
-          </h5>                  
-          <Rating max={5} value={rating} />
+                    <h5 className="card-title color_mate_blue font_quicksand mb-2">
+                      <Link
+                        style={{ cursor: "default" }}
+                        className="color_light_blue text-decoration-none"
+                        to={`/product/${id}`}
+                      >
+                        {title}
+                      </Link>
+                    </h5>
+                    <Rating max={5} value={rating} />
                     <p className="card-text color_mate_blue font_francois_one">
                       <span>${price.toFixed(2)}</span>
                     </p>
