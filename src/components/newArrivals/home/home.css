@@ -1,0 +1,11 @@
+.discover-btn  {
+    background-color: white;
+    border: 1px dashed #29458bda;
+    border-radius: 0;
+}
+.discover-btn:hover  {
+    background-color: white;
+    border: 1px dashed #29458bda;
+    color: #29458bda ;
+    border-radius: 0;
+}

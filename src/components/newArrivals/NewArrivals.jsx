@@ -7,6 +7,7 @@ import { Instagram } from "../instagram/Instagram";
 import { Home } from "./home/Home";
 import { Navbar } from "./navbar/NavBar";
 import { BestSellers } from "./bestsellers/BestSellers";
+import { ProductRandom } from "../product/ProductRandom";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";
@@ -28,7 +29,7 @@ export const NewArrivals = () => {
           <JoinUs />
         </div>
         <div className="col-8">
-          <Outlet />
+          <Outlet />{" "}
         </div>
       </div>
       <Instagram />
