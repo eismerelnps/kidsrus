@@ -1,68 +1,71 @@
 @font-face {
-    font-family: 'Francois_One';
-    src: url('/public/fonts/Francois_One/FrancoisOne-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'Gilda_Display';
-    src: url('/public/fonts/Gilda_Display/GildaDisplay-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'Quicksand';
-    src: url('/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
-  }
+  font-family: "Francois_One";
+  src: url("/public/fonts/Francois_One/FrancoisOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilda_Display";
+  src: url("/public/fonts/Gilda_Display/GildaDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
 
-  .border_gray_dashed_own  {
-    border: 1px dashed #525252da;
-    border-radius: 0;
+.border_gray_dashed_own {
+  border: 3px dashed #5e5e5e38;
+  border-radius: 0;
 }
-  .border_blue_dashed_own  {
-    border: 1px dashed #29458bda;
-    border-radius: 0;
+.border_blue_dashed_own {
+  border: 1px dashed #29458bda;
+  border-radius: 0;
 }
-.border_white_dashed_own  {
+.border_white_dashed_own {
   border: 3px dashed #ffffff;
   border-radius: 0;
 }
 
-  .font_gilda_display {
-    font-family: 'Gilda_Display';
-  }
-  .font_francois_one {
-    font-family: 'Francois_One';
-  }
-  .font_quicksand {
-    font-family: 'Quicksand';
-  }
+.font_gilda_display {
+  font-family: "Gilda_Display";
+}
+.font_francois_one {
+  font-family: "Francois_One";
+}
+.font_quicksand {
+  font-family: "Quicksand";
+}
 
-  .color_mate_blue {
-    color: #29458bda;
-  }
-  .color_light_blue {
-    color: #3455a6da;
-  }
-  .bg_color_orange {
-    background-color: #e9672fd4;
-  }
-  .bg_color_dark_orange {
-    background-color: #e05a35d2;
-  }
-  .bg_color_dark_yellow {
-    background-color: #dca547;
-  }
 
-  .color_dark_orange {
-    color: #e05a35d2;
-  }
-  .color_orange {
-    color: #e9672fd4;
-  }
-  .color_light_gray {
-    color: #52525240;
-  }
-  
-  
+.bg_color_orange {
+  background-color: #e9672fd4;
+}
+.bg_color_dark_orange {
+  background-color: #e05a35d2;
+}
+.bg_color_dark_yellow {
+  background-color: #dca547;
+}
 
-  .active {
-    opacity: 0.8;
-    text-decoration: none;
-  }
+.color_dark_orange {
+  color: #e05a35d2;
+}
+.color_orange {
+  color: #e9672fd4;
+}
+.color_gray {
+  color: #525252e1;
+}
+.color_light_gray {
+  color: #52525240;
+}
+.color_mate_blue {
+  color: #29458bda;
+}
+.color_light_blue {
+  color: #3455a6da;
+}
+
+
+/* .active {
+  opacity: 0.8;
+  text-decoration: none;
+} */

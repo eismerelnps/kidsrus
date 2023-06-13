@@ -6,6 +6,7 @@ import { JoinUs } from "../joinUs/JoinUs";
 import { Instagram } from "../instagram/Instagram";
 import { Home } from "./home/Home";
 import { Navbar } from "./navbar/NavBar";
+import { BestSellers } from "./bestsellers/BestSellers";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";
@@ -20,12 +21,13 @@ export const NewArrivals = () => {
         <img src={imagePath} className="img" alt="" />
       </div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-4">
           <SearchBar />
           <CategoryBox />
+          <BestSellers />
           <JoinUs />
         </div>
-        <div className="col-9">
+        <div className="col-8">
           <Outlet />
         </div>
       </div>

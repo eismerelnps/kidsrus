@@ -10,13 +10,13 @@ import { Play } from "../components/categories/play/Play";
 
 import ErrorPage from "../components/errorPage/ErrorPage";
 import { ProductRandom } from "../components/product/ProductRandom";
-import { ProductScreen } from "../components/product/ProductScreen";
+import { ProductScreen } from "../components/product/productScreen/ProductScreen";
 
 export const router = createBrowserRouter(
   [
     {
       path: "product/:productsId",
-      element: <ProductScreen />,
+      element: <ProductScreen  />,
     },
     {
       path: "/",
