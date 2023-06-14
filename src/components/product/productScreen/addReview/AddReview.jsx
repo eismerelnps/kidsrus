@@ -6,7 +6,7 @@ import { useForm } from "../../../../hooks/useForm";
 import './addReview.css'
 
 export const AddReview = () => {
-  const [formValues, handdleInputChange, reset = useForm({
+  const [formValues, handdleInputChange, reset] = useForm({
     rating: 0,
     review: "",
     name: "",
