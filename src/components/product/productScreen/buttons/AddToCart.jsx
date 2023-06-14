@@ -1,41 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "../../../../hooks/useForm";
 
 export const AddToCart = () => {
-  const { handdleInputChange, values } = useForm(1);
+  const [formValues, handdleInputChange, reset] = useForm({
+    amount: 1,
+  });
+
+  const { amount } = formValues;
 
   const handdAddToCart = (e) => {
-    console.log(`Added ${values} to cart`);
+    e.preventDefault();
+    console.log(`Added ${amount} products to cart`);
+    reset();
   };
 
   return (
     <div className="d-flex align-items-center">
-      <div className="row">
-        <div className="col-4 border_gray_dashed_own">
-          <form className="join_us_form row" onSubmit={handdAddToCart}>
-            <input
-              type="number"
-              name="amount"
-              className="joinus_input text-light col-12 p-2 mb-3 font_gilda_display border-0"
-              placeholder="Your Email Address *"
-              autoComplete="off"
-              onChange={handdleInputChange}
-            />
-          </form>
-        </div>
-        <div className="col-8">
-          <div className="joinus-btn-container">
-            <button
-              className="joinus-btn bg-light col-12 text-center align-middle"
-              type="submit"
-            >
-              <span className="color_dark_orange font_francois_one">
-                SUBSCRIBE
-              </span>
-            </button>
+      <form className="border-0 rounded-0 mb-3">
+        <div className="row align-items-center">
+          <div className="col-3">
+            <div className="border_gray_dashed_own">
+              <input
+                required
+                type="number"
+                name="amount"
+                className="form-control form-light border-0 rounded-0 font_quicksand border-secondary"
+                value={amount}
+                autoComplete="off"
+                onChange={handdleInputChange}
+              />
+            </div>
+          </div>
+          <div className="col-8 d-flex">
+            <div className="bg_color_orange p-1 flex-grow-1">
+              <button
+                type="submit"
+                className="submit_btn border_white_dashed_own rounded-0 btn text-light font_francois_one w-100"
+                onClick={handdAddToCart}
+              >
+                ADD TO CART
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

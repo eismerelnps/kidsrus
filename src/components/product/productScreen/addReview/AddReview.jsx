@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "../../../../hooks/useForm";
 
-import './addReview.css'
+import "./addReview.css";
 import { RatingSubmit } from "../../../rating/RatingSubmit";
 
 export const AddReview = () => {
@@ -16,12 +16,13 @@ export const AddReview = () => {
 
   const handleRatingChange = (value) => {
     handleInputChange({ target: { name: "rating", value } });
-    console.log(value);
   };
 
   const handleSubmitReview = (e) => {
     e.preventDefault();
-    console.log(`Review submited == Rating: ${rating} Review: ${review} Name: ${name} Email:${email}`);
+    console.log(
+      `Review submited == Rating: ${rating} Review: ${review} Name: ${name} Email:${email}`
+    );
     reset();
   };
 
@@ -31,7 +32,8 @@ export const AddReview = () => {
       <div className="border_gray_dashed_own p-3">
         <div>
           <p className="font_quicksand color_gray">
-            Your email address will not be published. Required fields are marked *
+            Your email address will not be published. Required fields are marked
+            *
           </p>
         </div>
         <div className="d-flex flex-column align-items-start mb-3">
@@ -39,7 +41,10 @@ export const AddReview = () => {
           <RatingSubmit max={5} onRatingChange={handleRatingChange} />
         </div>
         <div className="mb-5">
-          <form className="border-0 rounded-0 mb-3" onSubmit={handleSubmitReview}>
+          <form
+            className="border-0 rounded-0 mb-3"
+            onSubmit={handleSubmitReview}
+          >
             <textarea
               required
               name="review"
@@ -50,7 +55,10 @@ export const AddReview = () => {
             />
             <div className="row justify-content-center text-center mb-3">
               <div className="col-4">
-                <label htmlFor="form_name" className="form-label color_mate_blue">
+                <label
+                  htmlFor="form_name"
+                  className="form-label color_mate_blue"
+                >
                   Name*
                 </label>
                 <div className="border_gray_dashed_own">
@@ -67,7 +75,10 @@ export const AddReview = () => {
                 </div>
               </div>
               <div className="col-4">
-                <label htmlFor="form_email" className="form-label color_mate_blue">
+                <label
+                  htmlFor="form_email"
+                  className="form-label color_mate_blue"
+                >
                   Email*
                 </label>
                 <div className="border_gray_dashed_own">
@@ -86,7 +97,12 @@ export const AddReview = () => {
             </div>
 
             <div className="bg_color_orange p-1 d-inline-block">
-              <button type="submit" className="submit_btn border_white_dashed_own rounded-0 btn text-light font_francois_one">SUBMIT</button>
+              <button
+                type="submit"
+                className="submit_btn border_white_dashed_own rounded-0 btn text-light font_francois_one"
+              >
+                SUBMIT
+              </button>
             </div>
           </form>
         </div>

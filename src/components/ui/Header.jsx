@@ -1,7 +1,7 @@
 import { nav } from "../../data/nav";
 import { NavItem } from "./NavItem";
 
-import './ui.css'
+import "./ui.css";
 
 export const Header = () => {
   return (
@@ -14,17 +14,20 @@ export const Header = () => {
         />
       </div>
 
-      
       <ul className="nav justify-content-center mb-5">
         {nav.map(({ title, navTo }) => (
           <NavItem key={title} title={title} navTo={navTo} />
         ))}
         <i className="fa-regular fa-heart p-2 color_mate_blue"></i>
-        <i className="fa-solid fa-cart-shopping p-2 color_mate_blue"></i>
+
+        <i className="fa-solid fa-cart-shopping p-2 color_mate_blue position-relative">
+          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            2<span className="visually-hidden">Products in cart</span>
+          </span>
+        </i>
+
         <i className="fa-solid fa-magnifying-glass p-2 color_mate_blue"></i>
       </ul>
-
-      
     </div>
   );
 };

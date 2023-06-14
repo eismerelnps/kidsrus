@@ -1,10 +1,8 @@
 import { Header } from "./components/ui/Header";
-import { randomDate } from "./helpers/randomDate";
 import { Footer } from "./components/ui/Footer";
 import { CookiesAd } from "./components/ui/CookiesAd";
-import {  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import "./app.css";
 import { NewArrivals } from "./components/newArrivals/NewArrivals";
 import { Girls } from "./components/categories/girls/Girls";
 import { Boys } from "./components/categories/boys/Boys";
@@ -14,9 +12,9 @@ import { Play } from "./components/categories/play/Play";
 import { ProductScreen } from "./components/product/productScreen/ProductScreen";
 import { ProductRandom } from "./components/product/ProductRandom";
 
+import "./app.css";
+
 export const App = () => {
-  const date = randomDate();
-  console.log(date);
   return (
     <>
       <div className="bg_color_orange">
@@ -42,10 +40,8 @@ export const App = () => {
             </Route>
 
             {/* Ruta para ProductScreen */}
-           
-              <Route path="product/:productsId" element={<ProductScreen />} />
-          
-           
+
+            <Route path="product/:productsId" element={<ProductScreen />} />
           </Routes>
         </div>
       </div>
