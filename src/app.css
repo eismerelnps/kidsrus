@@ -10,6 +10,16 @@
   font-family: "Quicksand";
   src: url("/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
+.font_gilda_display {
+  font-family: "Gilda_Display";
+}
+.font_francois_one {
+  font-family: "Francois_One";
+}
+.font_quicksand {
+  font-family: "Quicksand";
+}
+
 
 .border_gray_dashed_own {
   border: 3px dashed #5e5e5e38;
@@ -24,15 +34,7 @@
   border-radius: 0;
 }
 
-.font_gilda_display {
-  font-family: "Gilda_Display";
-}
-.font_francois_one {
-  font-family: "Francois_One";
-}
-.font_quicksand {
-  font-family: "Quicksand";
-}
+
 
 
 .bg_color_orange {

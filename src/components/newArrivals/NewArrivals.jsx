@@ -1,13 +1,12 @@
 import React from "react";
-import { SearchBar } from "../search/SearchBar";
 import { CategoryBox } from "../categoryBox/CategoryBox";
-import { Outlet, RouterProvider } from "react-router-dom";
-import { JoinUs } from "../joinUs/JoinUs";
+import { Outlet } from "react-router-dom";
 import { Instagram } from "../instagram/Instagram";
 import { Home } from "./home/Home";
 import { Navbar } from "./navbar/NavBar";
 import { BestSellers } from "./bestsellers/BestSellers";
-import { ProductRandom } from "../product/ProductRandom";
+import { JoinUs } from "./joinUs/JoinUs";
+import { SearchBar } from "./search/SearchBar";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";

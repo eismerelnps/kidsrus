@@ -9,7 +9,6 @@ import { Home } from "../components/categories/home/Home";
 import { Play } from "../components/categories/play/Play";
 
 import ErrorPage from "../components/errorPage/ErrorPage";
-import { ProductRandom } from "../components/product/ProductRandom";
 import { ProductScreen } from "../components/product/productScreen/ProductScreen";
 import { NewArrivals } from "../components/newArrivals/NewArrivals";
 
@@ -20,15 +19,13 @@ export const router = createBrowserRouter(
       element: <App />,
       errorElement: <ErrorPage />,
       children: [
-       
         {
-          
           path: "*",
           element: <NewArrivals />,
-          
+
           children: [
             // Las rutas anidadas dentro de NewArrivals se definen aquí nuevamente
-            
+
             {
               path: "girls",
               element: <Girls />,
