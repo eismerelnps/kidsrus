@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryBox } from "../categoryBox/CategoryBox";
+import { CategoryBox } from "./categoryBox/CategoryBox";
 import { Outlet } from "react-router-dom";
 import { Instagram } from "./instagram/Instagram";
 import { Home } from "./home/Home";

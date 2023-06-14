@@ -72,12 +72,10 @@ export const ProductCard = ({
                   OUT OF STOCK
                 </span>
               </div>
-              {hovered && <Favorite />}
+              {hovered && <Favorite  handleAddToWishList={handleAddToWishList} />}
             </>
           ) : hovered && stockAmount > 0 ? (
             <FavCartSearch 
-            name={title}
-            value={title}
             handleAddToCart={handleAddToCart} 
             handleAddToWishList={handleAddToWishList}
             handleSearch={handleSearch}
@@ -85,19 +83,20 @@ export const ProductCard = ({
           ) : null}
         </div>
         <div className="card-body text-center">
-          <h5 className="card-subtitle color_orange mb-2 font_francois_one">
-            {category}
-          </h5>
+          <p className="card-subtitle color_orange mb-2 font_quicksand">
+            <b>{category}</b>
+          </p>
 
-          <h5 className="card-title color_mate_blue font_gilda_display mb-2">
+          <h4 className="card-title color_mate_blue font_gilda_display mb-2">
             <Link
               style={{cursor: "default"}}
-              className="color_light_blue text-decoration-none"
+              className="color_light_blue text-decoration-none "
               to={`/product/${id}`}
             >
-              {title}
+             {title}
+             
             </Link>
-          </h5>
+          </h4>
           {stockAmount !== 0 && (
             <p className="card-text color_mate_blue font_francois_one">
               <span>${price.toFixed(2)}</span>

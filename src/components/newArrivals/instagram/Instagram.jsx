@@ -1,5 +1,7 @@
 import React from "react";
 
+import './instagram.css'
+
 export const Instagram = () => {
   const path = "/assets/main/home-8.png";
 
@@ -24,9 +26,10 @@ export const Instagram = () => {
       <div className="row justify-content-center">
         {images.map((image, i) => (
           <img
+          style={{cursor: "pointer"}}
           key={i}
             src={`${process.env.PUBLIC_URL}${image}`}
-            className="img col-2"
+            className="instagram_images img col-2"
             alt="instagram"
           />
         ))}

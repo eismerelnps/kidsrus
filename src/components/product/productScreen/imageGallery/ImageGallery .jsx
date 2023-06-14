@@ -3,12 +3,7 @@ import React, { useState } from "react";
 import "./imagegallery.css";
 import { imageZoom } from "./imageZoom";
 
-export const ImageGallery = ({ images, category }) => {
-
-
-
-
-  
+export const ImageGallery = ({ images, category, stockAmount }) => {
   const handleMouseEnter = () => {
     setZoomVisible(true);
     handleImageZoom();
@@ -16,7 +11,7 @@ export const ImageGallery = ({ images, category }) => {
 
   const handleImageZoom = () => {
     imageZoom("myimage", "myresult");
-  }
+  };
 
   const handleMouseLeave = () => {
     setZoomVisible(false);
@@ -54,6 +49,14 @@ export const ImageGallery = ({ images, category }) => {
           onClick={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         />
+        {stockAmount === 0 && (
+          <div className="position-absolute top-0 end-0 m-3">
+            <span className="outOfStockBtn bg-light rounded-5 color_light_blue font_francois_one px-3 py-1">
+              OUT OF STOCK
+            </span>
+          </div>
+        )}
+
         <div
           id="myresult"
           className={`img-zoom-result ${zoomVisible ? "d-block" : "d-none"}`}

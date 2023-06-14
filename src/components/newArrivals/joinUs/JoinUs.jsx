@@ -4,13 +4,16 @@ import "./joinUs.css";
 import { useForm } from "../../../hooks/useForm";
 
 export const JoinUs = () => {
-  const [formValues, handdleInputChange] = useForm({});
+  const [formValues, handdleInputChange, reset] = useForm({
+    emailAddress: '',
+  });
 
   const { emailAddress } = formValues;
 
   const handleSubscribe = (e) => {
     e.preventDefault();
     console.log("Subscribe sent for " + emailAddress);
+    reset();
   };
 
   return (

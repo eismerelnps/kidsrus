@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Reviews } from "./Reviews";
 import { AddInformation } from "./AddInformation";
 import { ProductList } from "../../ProductList";
+import { AddReview } from "../addReview/AddReview";
 
 export const ProductScreenFooter = ({
   title,
@@ -107,6 +108,8 @@ export const ProductScreenFooter = ({
         <Reviews title={title} reviews={reviews} />
       )}
       </div>
+
+      <AddReview />
 
 
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">

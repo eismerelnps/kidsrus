@@ -1,15 +1,8 @@
-import { NavLink, useNavigate } from "react-router-dom";
 import { navbar } from "../../../data/navbar";
-import { CardCircle } from "../../categoryBox/CardCircle";
-import { key } from "localforage";
+import { CardCircle } from "../categoryBox/CardCircle";
 
 export const Navbar = () => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    navigate("/", {
-      replace: true,
-    });
-  };
+ 
 
   return (
     <nav className="navbar navbar-expand-sm p-5 mb-5">
