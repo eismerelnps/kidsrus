@@ -4,8 +4,8 @@ import "./footer.css";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-wave"></div>
+    <footer className="footer wave">
+      <div className="footer-wave "></div>
       <div className="container">
         <div className="row">
           <div className="col-md-4">

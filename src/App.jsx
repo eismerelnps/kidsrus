@@ -2,7 +2,7 @@ import { Header } from "./components/ui/Header";
 import { randomDate } from "./helpers/randomDate";
 import { Footer } from "./components/ui/Footer";
 import { CookiesAd } from "./components/ui/CookiesAd";
-import { Outlet, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 
 import "./app.css";
 import { NewArrivals } from "./components/newArrivals/NewArrivals";

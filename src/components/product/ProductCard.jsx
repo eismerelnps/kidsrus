@@ -34,7 +34,15 @@ export const ProductCard = ({
 
   const handleAddToCart = () => {
     console.log("Add to cart");
-    // Realizar acciones necesarias para agregar el artículo al carrito
+    // make needed actions in order to adding to cart
+  };
+  const handleAddToWishList = () => {
+    console.log("Add to wishlist");
+    // Make needed actions to add to wishlist
+  };
+  const handleSearch = () => {
+    console.log("search");
+    // Make needed actions to handle search
   };
 
   return (
@@ -44,13 +52,16 @@ export const ProductCard = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="card border-0 rounded-0">
-        <div className="position-relative">
+        <div className="position-relative"
+         onMouseLeave={handleMouseLeave}
+         >
           <img
             src={hovered ? hoverImagePath : imagePath}
             className="card-img-top border-0 rounded-0 mb-2 animate__animated animate__fadeIn"
             alt={title}
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+           
+          
             style={{ cursor: "pointer" }}
           />
 
@@ -64,7 +75,13 @@ export const ProductCard = ({
               {hovered && <Favorite />}
             </>
           ) : hovered && stockAmount > 0 ? (
-            <FavCartSearch />
+            <FavCartSearch 
+            name={title}
+            value={title}
+            handleAddToCart={handleAddToCart} 
+            handleAddToWishList={handleAddToWishList}
+            handleSearch={handleSearch}
+            />
           ) : null}
         </div>
         <div className="card-body text-center">
