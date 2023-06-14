@@ -10,8 +10,8 @@ import { SearchBar } from "./search/SearchBar";
 
 export const NewArrivals = () => {
   const path = "/assets/main/home-8.png";
-  const imagePath = `${process.env.PUBLIC_URL}.${path}`;
-
+  const imagePath = `${window.location.origin}${path}`;
+  
   return (
     <div className="container-fluid">
       <Home />

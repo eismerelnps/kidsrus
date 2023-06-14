@@ -13,20 +13,20 @@ export const SearchBar = () => {
   const { q = ''} = queryString.parse(location.search);
 
 
-  const [formValues, handdleInputChange ] = useForm({
+  const [formValues, handdleInputChange, reset ] = useForm({
     searchText: q,
   });
 
   const { searchText } = formValues;
-  // let filteredProducts =  useMemo( () => getProductByName(q), [q])
-
+  //let filteredProducts =  useMemo( () => getProductByName(q), [q])
+//console.log(filteredProducts);
 
 
 
   const handdleSubmit = (e) => {
     e.preventDefault();
-    navigate(`?q=${searchText}`)
-   // reset();
+    navigate(`/?q=${searchText}`)
+    reset();
   };
 
   return (

@@ -12,25 +12,20 @@ export const ProductRandom = () => {
 
   let filteredProducts = useMemo(() => getProductByName(q), [q]);
 
-  console.log(filteredProducts);
-  console.log("q " + q);
+  // console.log(filteredProducts);
+  // console.log("q " + q);
 
   const randomProduct = getRandomProduct(9);
 
   return (
     <div className="row">
-      {q === "" ? (
-        <div className="alert alert-info">Buscar un héroe</div>
-      ) : filteredProducts.length === 0 && (
-        randomProduct.map((product) => (
-          <ProductCard size="col-xl-4" key={product.id} {...product} />
-        )
-      )
-      )}
-
-      {filteredProducts.map((product) => (
-        <ProductCard size="col-xl-4" key={product.id} {...product} />
-      ))}
+      {q === ""
+        ? randomProduct.map((product) => (
+            <ProductCard size="col-xl-4" key={product.id} {...product} />
+          ))
+        : filteredProducts.map((product) => (
+            <ProductCard size="col-xl-4" key={product.id} {...product} />
+          ))}
     </div>
   );
 };
