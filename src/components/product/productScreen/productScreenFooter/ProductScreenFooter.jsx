@@ -5,6 +5,7 @@ import { ProductList } from "../../ProductList";
 import { AddReview } from "../addReview/AddReview";
 
 export const ProductScreenFooter = ({
+  stockAmount,
   title,
   category,
   description,
@@ -45,29 +46,33 @@ export const ProductScreenFooter = ({
             />
           )}
         </div>
-        <div className="p-4">
-          <div>
-            <button
-              type="button"
-              className={`btn border-0 ${
-                visibleSection === "two" ? "active" : ""
-              }`}
-              onClick={() => handleSetVisible("two")}
-            >
-              <h4 className="font_francois_one color_mate_blue">
-                ADDITIONAL INFORMATION
-              </h4>
-            </button>
-          </div>
 
-          {visibleSection === "two" && (
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
-              className="img mb-5"
-              alt="page_mark"
-            />
-          )}
-        </div>
+        {stockAmount > 0 && (
+          <div className="p-4">
+            <div>
+              <button
+                type="button"
+                className={`btn border-0 ${
+                  visibleSection === "two" ? "active" : ""
+                }`}
+                onClick={() => handleSetVisible("two")}
+              >
+                <h4 className="font_francois_one color_mate_blue">
+                  ADDITIONAL INFORMATION
+                </h4>
+              </button>
+            </div>
+
+            {visibleSection === "two" && (
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+                className="img mb-5"
+                alt="page_mark"
+              />
+            )}
+          </div>
+        )}
+
         <div className="p-4">
           <div>
             <button
@@ -94,37 +99,35 @@ export const ProductScreenFooter = ({
       </div>
 
       <div className="mb-5">
+        {visibleSection === "one" && (
+          <p className="text-start text-dark mb-3 font_quicksand">
+            {description}
+          </p>
+        )}
 
-      
-      {visibleSection === "one" && (
-        <p className="text-start text-dark mb-3 font_quicksand">
-          {description}
-        </p>
-      )}
+        {visibleSection === "two" && (
+          <AddInformation information={information} />
+        )}
 
-      {visibleSection === "two" && <AddInformation information={information} />}
-
-      {visibleSection === "three" && (
-        <Reviews title={title} reviews={reviews} />
-      )}
+        {visibleSection === "three" && (
+          <Reviews title={title} reviews={reviews} />
+        )}
       </div>
 
-      <AddReview />
-
+      {stockAmount > 0 &&  <AddReview />}
 
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
-        <img src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`} className="img" alt="" />
-      </div>
-
-      <div className="container p-5">
-        <ProductList 
-        category={category} 
-        amount={4}
-        size={'col-xl-3'}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+          className="img"
+          alt=""
         />
       </div>
 
+      <div className="container p-5">
+        <ProductList category={category} amount={4} size={"col-xl-3"} />
+      </div>
     </div>
   );
 };

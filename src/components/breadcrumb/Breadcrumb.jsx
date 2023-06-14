@@ -2,8 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export const Breadcrumb = ({ category, title }) => {
-  const text = "Dos palabras";
-
   const removeFirstWordAndLowercase = (text) => {
     const words = text.split(" "); // Divide el texto en un array de palabras
     words.shift(); // Elimina la primera palabra del array
@@ -13,9 +11,6 @@ export const Breadcrumb = ({ category, title }) => {
 
     return lowercasedText;
   };
-
-  const modifiedText = removeFirstWordAndLowercase(text);
-  console.log(modifiedText); // Salida: "palabras"
 
   return (
     <div className="border_gray_dashed_own py-4 w-100">

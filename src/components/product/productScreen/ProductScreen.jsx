@@ -20,6 +20,7 @@ export const ProductScreen = () => {
   const {
     title,
     price,
+    newPrice,
     stockAmount,
     category,
     tags,
@@ -31,23 +32,35 @@ export const ProductScreen = () => {
     reviews,
   } = product;
 
-  // const handleReturn = () => {
-  //   navigate(-1, { replace: true });
-  // };
-
   return (
     <>
       <Breadcrumb category={category} title={title} />
       <div className="container text-center">
         <div className="row mt-5 m-">
           <div className="col-4">
-            <ImageGallery images={images} stockAmount={stockAmount} category={category} />
+            <ImageGallery
+              images={images}
+              stockAmount={stockAmount}
+              category={category}
+            />
           </div>
 
           <div className="col-8">
-            <p className="text-start card-text color_mate_blue font_francois_one">
-              <span>${price.toFixed(2)}</span>
-            </p>
+            {newPrice ? (
+              <div className="d-flex">
+                <p className="text-start card-text text-decoration-line-through color_light_gray font_francois_one">
+                  <span>${price.toFixed(2)}</span>
+                </p>
+                <p className="text-start card-text  ms-2 color_mate_blue font_francois_one">
+                  <span>${newPrice.toFixed(2)}</span>
+                </p>
+              </div>
+            ) : (
+              <p className="text-start card-text color_mate_blue font_francois_one">
+                <span>${price.toFixed(2)}</span>
+              </p>
+            )}
+
             <div className="text-start mb-4">
               <Rating max={5} value={rating} />
             </div>
@@ -110,15 +123,14 @@ export const ProductScreen = () => {
           </div>
         </div>
 
-       
         <ProductScreenFooter
+          stockAmount={stockAmount}
           title={title}
           category={category}
           description={description}
           information={information}
           reviews={reviews}
         />
-       
       </div>
     </>
   );
