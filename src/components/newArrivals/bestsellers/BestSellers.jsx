@@ -24,7 +24,7 @@ export const BestSellers = () => {
                         style={{ width: "80px", height: "80px" }}
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/${category}/${images[0].img1}`}
+                          src={`${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`}
                           className="img-fluid"
                           alt="page_logo"
                         />

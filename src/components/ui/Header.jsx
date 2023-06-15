@@ -8,7 +8,7 @@ export const Header = () => {
     <div className="mb-5">
       <div className="text-center">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/main/logo.png`}
+          src={`${process.env.PUBLIC_URL}./assets/main/logo.png`}
           className="img mb-5"
           alt="page_logo"
         />

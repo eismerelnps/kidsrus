@@ -12,9 +12,6 @@ export const ProductRandom = () => {
 
   let filteredProducts = useMemo(() => getProductByName(q), [q]);
 
-  // console.log(filteredProducts);
-  // console.log("q " + q);
-
   const randomProduct = getRandomProduct(9);
 
   return (

@@ -4,8 +4,12 @@ import "./footer.css";
 export const Footer = () => {
   return (
     <div className="bg_color_dark_yellow">
+      <div className="wave-container">
+      
+      </div>
+
       <div className="row">
-        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
+        <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="mt-5 text-center">
             <img
               src={`${process.env.PUBLIC_URL}/assets/main/logo(1).png`}
@@ -46,11 +50,13 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
+
           <div className="text-center">
             <i className="fa-brands fa-facebook-f text-light p-2"></i>
             <i className="fa-brands fa-instagram text-light p-2"></i>
             <i className="fa-brands fa-twitter text-light p-2"></i>
           </div>
+
           <div className="text-center text-light">
             <div>
               <a
@@ -64,12 +70,6 @@ export const Footer = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
-          {/* Contenido del footer centrado vertical y horizontalmente */}
-        </div>
-        <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
-          {/* Contenido del footer centrado vertical y horizontalmente */}
         </div>
       </div>
     </div>

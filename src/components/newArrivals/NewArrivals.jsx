@@ -7,7 +7,6 @@ import { Navbar } from "./navbar/NavBar";
 import { BestSellers } from "./bestsellers/BestSellers";
 import { JoinUs } from "./joinUs/JoinUs";
 import { SearchBar } from "./search/SearchBar";
-import { ZoomImage } from "./ZoomImage";
 
 
 
@@ -16,15 +15,14 @@ export const NewArrivals = () => {
 
 
   
-  const path = "/assets/main/home-8.png";
-  const imagePath = `${window.location.origin}${path}`;
+  const path = "./assets/main/home-8.png";
+  const imagePath = `${process.env.PUBLIC_URL}${path}`;
   
 
   return (
     <div className="container-fluid">
 
 
-<ZoomImage  src={`${process.env.PUBLIC_URL}/assets/main/slider-1.jpg`}/>
 
 
 

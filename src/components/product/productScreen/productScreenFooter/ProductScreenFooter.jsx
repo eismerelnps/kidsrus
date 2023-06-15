@@ -40,7 +40,7 @@ export const ProductScreenFooter = ({
 
           {visibleSection === "one" && (
             <img
-              src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+              src={`${process.env.PUBLIC_URL}./assets/main/home-8.png`}
               className="img mb-5"
               alt="page_mark"
             />
@@ -65,7 +65,7 @@ export const ProductScreenFooter = ({
 
             {visibleSection === "two" && (
               <img
-                src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+                src={`${process.env.PUBLIC_URL}./assets/main/home-8.png`}
                 className="img mb-5"
                 alt="page_mark"
               />
@@ -90,7 +90,7 @@ export const ProductScreenFooter = ({
 
           {visibleSection === "three" && (
             <img
-              src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+              src={`${process.env.PUBLIC_URL}./assets/main/home-8.png`}
               className="img mb-5"
               alt="page_mark"
             />
@@ -119,7 +119,7 @@ export const ProductScreenFooter = ({
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
         <img
-          src={`${process.env.PUBLIC_URL}/assets/main/home-8.png`}
+          src={`${process.env.PUBLIC_URL}./assets/main/home-8.png`}
           className="img"
           alt=""
         />

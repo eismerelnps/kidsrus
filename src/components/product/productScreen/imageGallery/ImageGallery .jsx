@@ -35,7 +35,7 @@ export const ImageGallery = ({ images, category }) => {
   }
 
   // Obtener la primera imagen como imagen grande
-  const largeImage = `${process.env.PUBLIC_URL}/assets/${category}/${
+  const largeImage = `${process.env.PUBLIC_URL}./assets/${category}/${
     images[0]["img" + (selectedImageIndex + 1)]
   }`;
 
@@ -68,7 +68,7 @@ export const ImageGallery = ({ images, category }) => {
             <div className="img-zoom-container">
               <img
                 id={`myimage-${index}`}
-                src={`${process.env.PUBLIC_URL}/assets/${category}/${image}`}
+                src={`${process.env.PUBLIC_URL}./assets/${category}/${image}`}
                 alt={`Imagen ${index + 2}`}
                 className="img-fluid"
                 onClick={() => handleImageClick(index)}

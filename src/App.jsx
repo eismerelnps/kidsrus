@@ -48,11 +48,6 @@ export const App = () => {
 
       <Footer />
       <CookiesAd />
-      <div className="mt-5">
-        <h1 className="font_gilda_display">font_gilda_display</h1>
-        <h1 className="font_francois_one">font_francois_one</h1>
-        <h1 className="font_quicksand">font_quicksand</h1>
-      </div>
     </>
   );
 };

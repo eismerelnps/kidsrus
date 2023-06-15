@@ -5,9 +5,9 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
+    <div id="error-page" className="w-100 text-center">
       <h1>Oops!</h1>
-      <p>Disculpas un error inesperado ha sucedido.</p>
+      <p>An Error detected</p>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
