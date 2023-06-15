@@ -16,7 +16,7 @@ export const NewArrivals = () => {
 
   
   const path = "/assets/main/home-8.png";
-  const imagePath = `${process.env.PUBLIC_URL}../.${path}`;
+  const imagePath = `${process.env.PUBLIC_URL}.${path}`;
   
 
   return (
