@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import "./imagegallery.css";
 import { imageZoom } from "./imageZoom";
 
-export const ImageGallery = ({ images, category, stockAmount }) => {
+export const ImageGallery = ({ images, category }) => {
+  const [zoomStyle, setZoomStyle] = useState(null);
+
   const handleMouseEnter = () => {
-    setZoomVisible(true);
+    //console.log("Entering");
+    //setZoomVisible(true);
     handleImageZoom();
   };
 
@@ -15,9 +18,10 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
 
   const handleMouseLeave = () => {
     setZoomVisible(false);
+    setZoomStyle(null);
   };
 
-  const [zoomVisible, setZoomVisible] = useState(false);
+  const [zoomVisible, setZoomVisible] = useState(true);
 
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -40,27 +44,17 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
 
   return (
     <div>
-      <div className=" img-zoom-container text-center">
+      <div onMouseLeave={handleMouseLeave} className=" img-zoom-container text-center">
         <img
           id="myimage"
           src={largeImage}
           alt="large grande"
           className="img-fluid"
           onClick={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          
         />
-        {stockAmount === 0 && (
-          <div className="position-absolute top-0 end-0 m-3">
-            <span className="outOfStockBtn bg-light rounded-5 color_light_blue font_francois_one px-3 py-1">
-              OUT OF STOCK
-            </span>
-          </div>
-        )}
-
-        <div
-          id="myresult"
-          className={`img-zoom-result ${zoomVisible ? "d-block" : "d-none"}`}
-        ></div>
+        {zoomVisible === true &&
+        <div id="myresult" className={`img-zoom-result `}></div>}
       </div>
 
       <div className="row mt-1">
@@ -79,6 +73,9 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
                 className="img-fluid"
                 onClick={() => handleImageClick(index)}
               />
+              {zoomStyle && (
+                <div className="zoom-image" style={zoomStyle}></div>
+              )}
             </div>
           </div>
         ))}
