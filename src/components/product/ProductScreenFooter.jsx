@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from "react";
 import { Reviews } from "./Reviews";
 import { AddInformation } from "./AddInformation";
-import { ProductList } from "../ProductList";
+import { ProductList } from "./ProductList";
 import { AddReview } from "./addReview/AddReview";
-import { getProductByCategory } from "../../../helpers/getProductByCategory";
-import { ProductCard } from "../ProductCard";
+import { getProductByCategory } from "../../helpers/getProductByCategory";
+import { ProductCard } from "./ProductCard";
 
 export const ProductScreenFooter = ({
   stockAmount,

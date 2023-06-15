@@ -5,8 +5,8 @@ import { Rating } from "../rating/Rating";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 import { AddToWishList } from "./productScreen/buttons/AddToWishList";
 import { AddToCart } from "./productScreen/buttons/AddToCart";
-import { ProductScreenFooter } from "./productScreen/ProductScreenFooter";
-import { ImageGallery } from "./productScreen/ImageGallery ";
+import { ProductScreenFooter } from "./ProductScreenFooter";
+import { ImageGallery } from "./ImageGallery ";
 
 export const ProductScreen = () => {
   const { productsId } = useParams();
