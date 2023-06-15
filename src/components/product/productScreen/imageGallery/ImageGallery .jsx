@@ -37,7 +37,7 @@ export const ImageGallery = ({ images, category }) => {
   }
 
   // Obtener la primera imagen como imagen grande
-  const largeImage = `${process.env.PUBLIC_URL}../assets/${category}/${images[0]["img" + (selectedImageIndex + 1)]}`;
+  const largeImage = `${process.env.PUBLIC_URL}.././assets/${category}/${images[0]["img" + (selectedImageIndex + 1)]}`;
 
   // Obtener las imágenes restantes para la galería de miniaturas
   const thumbnailImages = Object.values(images[0]);
