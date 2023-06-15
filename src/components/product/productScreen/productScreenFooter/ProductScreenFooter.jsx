@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Reviews } from "./Reviews";
 import { AddInformation } from "./AddInformation";
 import { ProductList } from "../../ProductList";
 import { AddReview } from "../addReview/AddReview";
+import { getProductByCategory } from "../../../../helpers/getProductByCategory";
+import { ProductCard } from "../../ProductCard";
 
 export const ProductScreenFooter = ({
   stockAmount,
@@ -22,6 +24,9 @@ export const ProductScreenFooter = ({
     }
   };
 
+
+
+  const products = useMemo(() => getProductByCategory(category), [category]).slice(0, 4);;
   const pathHome = '.././assets/main/home-8.png'
 
   return (
@@ -128,7 +133,12 @@ export const ProductScreenFooter = ({
       </div>
 
       <div className="container p-5">
-        <ProductList category={category} amount={4} size={"col-xl-3"} />
+      <div className="row">
+      {products.map((product) => (
+        <ProductCard size={4} key={product.id} {...product} />
+      ))}
+    </div>
+        {/* <ProductList category={category} amount={4} size={"col-xl-3"} /> */}
       </div>
     </div>
   );
