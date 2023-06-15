@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./imagegallery.css";
 import { imageZoom } from "./imageZoom";
 
-export const ImageGallery = ({ images, category }) => {
+export const ImageGallery = ({ images, category, stockAmount }) => {
 
 
   const [zoomStyle, setZoomStyle] = useState(null);
@@ -44,6 +44,8 @@ export const ImageGallery = ({ images, category }) => {
   return (
     <div>
       <div onMouseLeave={handleMouseLeave} className=" img-zoom-container text-center">
+      <div className="card border-0 rounded-0">
+        <div className="position-relative">
         <img
           id="myimage"
           src={largeImage}
@@ -52,6 +54,15 @@ export const ImageGallery = ({ images, category }) => {
           onClick={handleMouseEnter}
           
         />
+        {
+          stockAmount === 0 && (
+        
+        <div className="position-absolute top-0 end-0 m-3">
+                <span className="outOfStockBtn bg-light rounded-5 color_light_blue font_francois_one px-3 py-1">
+                  OUT OF STOCK
+                </span>
+              </div>)}
+        </div></div>
         {zoomVisible === true &&
         <div id="myresult" className={`img-zoom-result `}></div>}
       </div>
