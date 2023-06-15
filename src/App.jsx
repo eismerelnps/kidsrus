@@ -9,10 +9,10 @@ import { Boys } from "./components/categories/boys/Boys";
 import { Babies } from "./components/categories/babies/Babies";
 import { Home } from "./components/categories/home/Home";
 import { Play } from "./components/categories/play/Play";
-import { ProductScreen } from "./components/product/productScreen/ProductScreen";
 import { ProductRandom } from "./components/product/ProductRandom";
 
 import "./app.css";
+import { ProductScreen } from "./components/product/ProductScreen";
 
 export const App = () => {
   return (

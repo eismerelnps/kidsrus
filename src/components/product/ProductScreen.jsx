@@ -1,12 +1,12 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
-import { getProductById } from "../../../helpers/getProductById";
-import { Rating } from "../../rating/Rating";
-import { Breadcrumb } from "../../breadcrumb/Breadcrumb";
-import { AddToWishList } from "./buttons/AddToWishList";
-import { AddToCart } from "./buttons/AddToCart";
-import { ProductScreenFooter } from "./ProductScreenFooter";
-import { ImageGallery } from "./ImageGallery ";
+import { getProductById } from "../../helpers/getProductById";
+import { Rating } from "../rating/Rating";
+import { Breadcrumb } from "../breadcrumb/Breadcrumb";
+import { AddToWishList } from "./productScreen/buttons/AddToWishList";
+import { AddToCart } from "./productScreen/buttons/AddToCart";
+import { ProductScreenFooter } from "./productScreen/ProductScreenFooter";
+import { ImageGallery } from "./productScreen/ImageGallery ";
 
 export const ProductScreen = () => {
   const { productsId } = useParams();
