@@ -68,7 +68,7 @@ export const ImageGallery = ({ images, category }) => {
             <div className="img-zoom-container">
               <img
                 id={`myimage-${index}`}
-                src={`${process.env.PUBLIC_URL}./assets/${category}/${image}`}
+                src={`${process.env.PUBLIC_URL}/assets/${category}/${image}`}
                 alt={`Imagen ${index + 2}`}
                 className="img-fluid"
                 onClick={() => handleImageClick(index)}
