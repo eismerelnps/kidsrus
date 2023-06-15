@@ -12,7 +12,7 @@ import { Play } from "./components/categories/play/Play";
 import { ProductRandom } from "./components/product/ProductRandom";
 
 import "./app.css";
-import { ProductScreen } from "./components/product/ProductScreen";
+import { ProductScreen } from "./components/product/productScreen/ProductScreen";
 
 export const App = () => {
   return (

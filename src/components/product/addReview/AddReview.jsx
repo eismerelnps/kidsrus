@@ -1,8 +1,8 @@
 import React from "react";
-import { useForm } from "../../../../hooks/useForm";
 
 import "./addReview.css";
-import { RatingSubmit } from "../../../rating/RatingSubmit";
+import { RatingSubmit } from "../../rating/RatingSubmit";
+import { useForm } from "../../../hooks/useForm";
 
 export const AddReview = () => {
   const [formValues, handleInputChange, reset] = useForm({

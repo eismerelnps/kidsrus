@@ -1,10 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { Reviews } from "./Reviews";
 import { AddInformation } from "./AddInformation";
-import { ProductList } from "./ProductList";
-import { AddReview } from "./addReview/AddReview";
-import { getProductByCategory } from "../../helpers/getProductByCategory";
-import { ProductCard } from "./ProductCard";
+import { ProductList } from "../ProductList";
+import { AddReview } from "../addReview/AddReview";
 
 export const ProductScreenFooter = ({
   stockAmount,
@@ -24,10 +22,7 @@ export const ProductScreenFooter = ({
     }
   };
 
-  const products = useMemo(
-    () => getProductByCategory(category),
-    [category]
-  ).slice(0, 4);
+  
   const pathHome = ".././assets/main/home-8.png";
 
   return (
