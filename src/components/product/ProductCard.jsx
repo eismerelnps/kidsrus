@@ -19,9 +19,9 @@ export const ProductCard = ({
 }) => {
   const [hovered, setHovered] = useState(false);
 
-  const imagePath = `${process.env.PUBLIC_URL}.././assets/${category}/${images[0].img1}`;
+  const imagePath = `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`;
   const hoverImagePath = images[0].img2
-    ? `${process.env.PUBLIC_URL}.././assets/${category}/${images[0].img2}`
+    ? `${process.env.PUBLIC_URL}./assets/${category}/${images[0].img2}`
     : imagePath;
 
   const handleMouseEnter = () => {
