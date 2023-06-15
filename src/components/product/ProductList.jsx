@@ -4,6 +4,7 @@ import { ProductCard } from "./ProductCard";
 import { getProductByCategory } from "../../helpers/getProductByCategory";
 
 export const ProductList = ({ category, amount, size = "col-xl-4" }) => {
+  
   const products = useMemo(() => getProductByCategory(category), [category]);
 
   if (amount === null || amount === undefined || amount === 0) {
