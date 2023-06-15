@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import "./imagegallery.css";
-import { imageZoom } from "./imageZoom";
-import { toLowerCaseTwoFirst } from "../../../../helpers/toLowerCaseTwoFirst";
+import { imageZoom } from "./imageGallery/imageZoom";
+import { toLowerCaseTwoFirst } from "../../../helpers/toLowerCaseTwoFirst";
 
 export const ImageGallery = ({ images, category }) => {
 

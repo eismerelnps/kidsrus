@@ -24,10 +24,11 @@ export const ProductScreenFooter = ({
     }
   };
 
-
-
-  const products = useMemo(() => getProductByCategory(category), [category]).slice(0, 4);;
-  const pathHome = '.././assets/main/home-8.png'
+  const products = useMemo(
+    () => getProductByCategory(category),
+    [category]
+  ).slice(0, 4);
+  const pathHome = ".././assets/main/home-8.png";
 
   return (
     <div>
@@ -121,7 +122,7 @@ export const ProductScreenFooter = ({
         )}
       </div>
 
-      {stockAmount > 0 &&  <AddReview />}
+      {stockAmount > 0 && <AddReview />}
 
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
@@ -133,12 +134,7 @@ export const ProductScreenFooter = ({
       </div>
 
       <div className="container p-5">
-      <div className="row">
-      {products.map((product) => (
-        <ProductCard size={4} key={product.id} {...product} />
-      ))}
-    </div>
-        {/* <ProductList category={category} amount={4} size={"col-xl-3"} /> */}
+        <ProductList category={category} amount={4} size={"col-xl-3"} />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { Breadcrumb } from "../../breadcrumb/Breadcrumb";
 import { AddToWishList } from "./buttons/AddToWishList";
 import { AddToCart } from "./buttons/AddToCart";
 import { ProductScreenFooter } from "./productScreenFooter/ProductScreenFooter";
-import { ImageGallery } from "./imageGallery/ImageGallery ";
+import { ImageGallery } from "./ImageGallery ";
 
 export const ProductScreen = () => {
   const { productsId } = useParams();
