@@ -13,7 +13,7 @@ export const Instagram = () => {
     "/assets/main/instagram/87413583_2660130777540405_5722961474466513534_nlow.jpg",
   ];
 
-  const imagePath = `${process.env.PUBLIC_URL}.${path}`;
+  const imagePath = `${process.env.PUBLIC_URL}../.${path}`;
 
   return (
     <div className="mb-5">
@@ -28,7 +28,7 @@ export const Instagram = () => {
           <img
           style={{cursor: "pointer"}}
           key={i}
-            src={`${process.env.PUBLIC_URL}.${image}`}
+            src={`${process.env.PUBLIC_URL}../.${image}`}
             className="instagram_images img col-2"
             alt="instagram"
           />

@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="mt-5 text-center">
             <img
-              src={`${process.env.PUBLIC_URL}./assets/main/logo(1).png`}
+              src={`${process.env.PUBLIC_URL}.././assets/main/logo(1).png`}
               className="img mt-5 mb-5"
               alt="page_logo"
             />
