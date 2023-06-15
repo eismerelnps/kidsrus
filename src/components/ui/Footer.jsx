@@ -41,12 +41,12 @@ export const Footer = () => {
 
           <ul className="nav justify-content-center mb-5">
             <li className="nav-item font_francois_one">
-              <a className="nav-link text-light" href={"as"}>
+              <a className="nav-link text-light" href={"/kidsrus"}>
                 SHOP
               </a>
             </li>
             <li className="nav-item font_francois_one">
-              <a className="nav-link text-light" href={"/"}>
+              <a className="nav-link text-light" href={"/kidsrus"}>
                 SALE
               </a>
             </li>
@@ -61,12 +61,12 @@ export const Footer = () => {
               </a>
             </li>
             <li className="nav-item font_francois_one">
-              <a className="nav-link text-light" href={"/"}>
+              <a className="nav-link text-light" href={"/kidsrus"}>
                 LOOKBOOK
               </a>
             </li>
             <li className="nav-item font_francois_one">
-              <a className="nav-link text-light" href={"/"}>
+              <a className="nav-link text-light" href={"/kidsrus"}>
                 CONTACTS
               </a>
             </li>

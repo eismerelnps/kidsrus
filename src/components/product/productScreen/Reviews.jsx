@@ -1,5 +1,5 @@
 import React from "react";
-import { Rating } from "../../../rating/Rating";
+import { Rating } from "../../rating/Rating";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

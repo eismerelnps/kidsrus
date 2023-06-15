@@ -5,7 +5,7 @@ import { Rating } from "../../rating/Rating";
 import { Breadcrumb } from "../../breadcrumb/Breadcrumb";
 import { AddToWishList } from "./buttons/AddToWishList";
 import { AddToCart } from "./buttons/AddToCart";
-import { ProductScreenFooter } from "./productScreenFooter/ProductScreenFooter";
+import { ProductScreenFooter } from "./ProductScreenFooter";
 import { ImageGallery } from "./ImageGallery ";
 
 export const ProductScreen = () => {

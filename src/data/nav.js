@@ -2,31 +2,31 @@ export const nav = [
     {
         'id': 'nav00',
         'title': 'HOME',
-        'navTo': '/',
+        'navTo': '/kidsrus',
     },
     {
         'id': 'nav01',
         'title': 'SHOP FEATURES',
-        'navTo': '/',
+        'navTo': '/kidsrus',
     },
     {
         'id': 'nav02',
         'title': 'CLOTHES',
-        'navTo': '/',
+        'navTo': '/kidsrus',
     },
     {
         'id': 'nav03',
         'title': 'PAGES',
-        'navTo': '/',
+        'navTo': '/kidsrus',
     },
     {
         'id': 'nav04',
         'title': 'SHORTCODES',
-        'navTo': '',
+        'navTo': '/kidsrus',
     },
     {
         'id': 'nav05',
         'title': 'POST TYPES',
-        'navTo': '/',
+        'navTo': '/kidsrus',
     }
 ]
