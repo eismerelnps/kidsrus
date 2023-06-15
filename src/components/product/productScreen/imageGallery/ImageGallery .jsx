@@ -2,10 +2,12 @@ import React, { useState } from "react";
 
 import "./imagegallery.css";
 import { imageZoom } from "./imageZoom";
-import { removeFirstWordAndLowercase } from "../../../../helpers/removeFirstWordAndLowercase";
 import { toLowerCaseTwoFirst } from "../../../../helpers/toLowerCaseTwoFirst";
 
 export const ImageGallery = ({ images, category }) => {
+
+  const lowerCategory = toLowerCaseTwoFirst(category)
+
   const [zoomStyle, setZoomStyle] = useState(null);
 
   const handleMouseEnter = () => {
@@ -36,7 +38,7 @@ export const ImageGallery = ({ images, category }) => {
   }
 
   // Obtener la primera imagen como imagen grande
-  const largeImage = `${process.env.PUBLIC_URL}./assets/${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`;
+  const largeImage = `${process.env.PUBLIC_URL}./assets/${lowerCategory}/${images[0]["img" + (selectedImageIndex + 1)]}`;
 
   // Obtener las imágenes restantes para la galería de miniaturas
   const thumbnailImages = Object.values(images[0]);
@@ -67,7 +69,7 @@ export const ImageGallery = ({ images, category }) => {
             <div className="img-zoom-container">
               <img
                 id={`myimage-${index}`}
-                src={`${process.env.PUBLIC_URL}./assets/${category}/${image}`}
+                src={`${process.env.PUBLIC_URL}./assets/${lowerCategory}/${image}`}
                 alt={`Imagen ${index + 2}`}
                 className="img-fluid"
                 onClick={() => handleImageClick(index)}
