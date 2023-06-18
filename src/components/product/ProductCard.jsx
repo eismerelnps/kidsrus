@@ -3,6 +3,8 @@ import { Favorite } from "../buttons/Favorite";
 import { FavCartSearch } from "../buttons/FavCartSearch";
 import { Link } from "react-router-dom";
 
+import '../../app.css';
+
 export const ProductCard = ({
   size,
   title,
