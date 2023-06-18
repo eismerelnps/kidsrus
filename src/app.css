@@ -1,11 +1,12 @@
 @font-face {
   font-family: "Francois_One";
-  src: url("../../kids-r-us/public/fonts/Francois_One/FrancoisOne-Regular.ttf");
+  src: url("../docs/fonts/Francois_One/FrancoisOne-Regular.ttf");
 }
 @font-face {
   font-family: "Gilda_Display";
-  src: url("../../kids-r-us/public/fonts/Gilda_Display/GildaDisplay-Regular.ttf");
+  src: url("../docs/fonts/Francois_One/FrancoisOne-Regular.ttf");
 }
+
 @font-face {
   font-family: "Quicksand";
   src: url("../../kids-r-us/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
