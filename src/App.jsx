@@ -1,18 +1,9 @@
 import { Header } from "./components/ui/Header";
 import { Footer } from "./components/ui/Footer";
 import { CookiesAd } from "./components/ui/CookiesAd";
-import { Route, Routes } from "react-router-dom";
-
-import { NewArrivals } from "./components/newArrivals/NewArrivals";
-import { Girls } from "./components/categories/girls/Girls";
-import { Boys } from "./components/categories/boys/Boys";
-import { Babies } from "./components/categories/babies/Babies";
-import { Home } from "./components/categories/home/Home";
-import { Play } from "./components/categories/play/Play";
-import { ProductRandom } from "./components/product/ProductRandom";
+import { Outlet } from "react-router-dom";
 
 import "./app.css";
-import { ProductScreen } from "./components/product/productScreen/ProductScreen";
 
 export const App = () => {
   return (
@@ -26,23 +17,8 @@ export const App = () => {
       </div>
       <div className="container mx-5 px-5">
         <Header />
-
         <div className="container">
-          <Routes>
-            <Route path="*" element={<NewArrivals />}>
-              {/* Rutas anidadas dentro de NewArrivals */}
-              <Route path="" element={<ProductRandom />} />
-              <Route path="girls" element={<Girls />} />
-              <Route path="boys" element={<Boys />} />
-              <Route path="babies" element={<Babies />} />
-              <Route path="home" element={<Home />} />
-              <Route path="play" element={<Play />} />
-            </Route>
-
-            {/* Ruta para ProductScreen */}
-
-            <Route path="product/:productsId" element={<ProductScreen />} />
-          </Routes>
+         <Outlet />
         </div>
       </div>
 
