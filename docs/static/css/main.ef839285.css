@@ -83,7 +83,7 @@
 }
 @font-face {
   font-family: Gilda_Display;
-  src: url("../../assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf")
+  src: url("../media/GildaDisplay-Regular.ttf")
     format("ttf");
 }
 @font-face {
