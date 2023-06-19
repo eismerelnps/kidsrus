@@ -23,11 +23,11 @@ export const BestSellers = () => {
                         className="rounded-circle overflow-hidden"
                         style={{ width: "80px", height: "80px" }}
                       >
-                        <img
+                        {/* <img
                           src={`${process.env.PUBLIC_URL}./assets/${category}/${images[0].img1}`}
                           className="img-fluid"
                           alt="page_logo"
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div className="col-8">

@@ -1,5 +1,6 @@
 import { nav } from "../../data/nav";
 import { NavItem } from "./NavItem";
+import logo from '../../assets/main/logo.png'
 
 import "./ui.css";
 
@@ -8,7 +9,7 @@ export const Header = () => {
     <div className="mb-5">
       <div className="text-center">
         <img
-          src={`${process.env.PUBLIC_URL}./assets/main/logo.png`}
+          src={logo}
           className="img mb-5"
           alt="page_logo"
         />
