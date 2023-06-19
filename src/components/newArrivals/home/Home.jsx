@@ -4,7 +4,7 @@ import './home.css'
 
 export const Home = () => {
   return (
-    <div className="row">
+    <div className="row mb-5">
     <div className="col-8 p-1">
       <div className="position-relative">
         <img

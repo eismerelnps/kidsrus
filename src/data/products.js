@@ -1,4 +1,5 @@
 export const products = [
+  
   {
     "title": " Brown Overalls ",
     "price": 34.00,

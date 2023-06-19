@@ -48,15 +48,21 @@ export const ProductCard = ({
   };
 
   return (
+   
     <div
       className={`${size} col-6  mt-1 mb-5`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-    >
+    >      <Link
+    style={{cursor: "default"}}
+    className="color_light_blue text-decoration-none "
+    to={`/product/${id}`}
+  >
       <div className="card border-0 rounded-0">
         <div className="position-relative"
          onMouseLeave={handleMouseLeave}
          >
+     
           <img
             src={hovered ? hoverImagePath : imagePath}
             className="card-img-top border-0 rounded-0 mb-2 animate__animated animate__fadeIn"
@@ -90,14 +96,10 @@ export const ProductCard = ({
           </p>
 
           <h4 className="card-title color_mate_blue font_gilda_display mb-2">
-            <Link
-              style={{cursor: "default"}}
-              className="color_light_blue text-decoration-none "
-              to={`/product/${id}`}
-            >
+           
              {title}
-             
-            </Link>
+           
+
           </h4>
           {stockAmount !== 0 && (
             <p className="card-text color_mate_blue font_francois_one">
@@ -105,7 +107,8 @@ export const ProductCard = ({
             </p>
           )}
         </div>
-      </div>
+      </div></Link>
     </div>
+  
   );
 };
