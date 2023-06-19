@@ -79,16 +79,16 @@
 }
 @font-face {
   font-family: Francois_One;
-  src: url("../public/assets/fonts/Francois_One/FrancoisOne-Regular.ttf");
+  src: url("../media/FrancoisOne-Regular.eac14538475d205a7761.ttf");
 }
 @font-face {
   font-family: Gilda_Display;
-  src: url("../public/assets/fonts/Francois_One/FrancoisOne-Regular.ttf")
+  src: url("../../assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf")
     format("ttf");
 }
 @font-face {
   font-family: Quicksand;
-  src: url("../public/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf")
+  src: url("../media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf")
     format("ttf");
 }
 .font_gilda_display {
