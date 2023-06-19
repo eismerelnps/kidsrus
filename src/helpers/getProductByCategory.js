@@ -11,5 +11,8 @@ export const getProductByCategory = (category) => {
   if (!validCategories.includes(category)) {
     throw new Error(`${category} is not a valid category`);
   }
+
+  console.log(products.map((item) => item.title));
+
   return products.filter((product) => product.category === category);
 };
