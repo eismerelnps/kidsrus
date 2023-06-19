@@ -1,16 +1,18 @@
 @font-face {
   font-family: "Francois_One";
-  src: url("../docs/fonts/Francois_One/FrancoisOne-Regular.ttf");
+  src: url("../public/assets/fonts/Francois_One/FrancoisOne-Regular.ttf");
 }
 @font-face {
   font-family: "Gilda_Display";
-  src: url("../docs/fonts/Francois_One/FrancoisOne-Regular.ttf");
+  src: url("../public/assets/fonts/Francois_One/FrancoisOne-Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../../kids-r-us/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+  src: url("../public/assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf")
+    format("ttf");
 }
+
 .font_gilda_display {
   font-family: "Gilda_Display";
 }
@@ -20,7 +22,6 @@
 .font_quicksand {
   font-family: "Quicksand";
 }
-
 
 .border_gray_dashed_own {
   border: 3px dashed #5e5e5e38;
@@ -34,9 +35,6 @@
   border: 3px dashed #ffffff;
   border-radius: 0;
 }
-
-
-
 
 .bg_color_orange {
   background-color: #e9672fd4;
@@ -66,7 +64,6 @@
 .color_light_blue {
   color: #3455a6da;
 }
-
 
 /* .active {
   opacity: 0.8;
