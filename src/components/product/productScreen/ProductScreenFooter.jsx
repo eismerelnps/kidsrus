@@ -4,7 +4,7 @@ import { AddInformation } from "./AddInformation";
 import { ProductList } from "../ProductList";
 import { AddReview } from "../addReview/AddReview";
 import { getProductByCategory } from "../../../helpers/getProductByCategory";
-import { RelatedCard } from "./RelatedCard";
+import { ProductCard } from "../ProductCard";
 
 export const ProductScreenFooter = ({
   stockAmount,
@@ -27,7 +27,7 @@ export const ProductScreenFooter = ({
   
 const products =  useMemo(() => getProductByCategory(category), [category]).slice(0, 4);
 
-  const pathHome = ".././assets/main/home-8.png";
+  const pathHome = "../../assets/main/home-8.png";
 
   return (
     <div>
@@ -47,7 +47,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
           {visibleSection === "one" && (
             <img
-              src={`${process.env.PUBLIC_URL}${pathHome}`}
+              src={`${pathHome}`}
               className="img mb-5"
               alt="page_mark"
             />
@@ -72,7 +72,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
             {visibleSection === "two" && (
               <img
-                src={`${process.env.PUBLIC_URL}${pathHome}`}
+                src={`${pathHome}`}
                 className="img mb-5"
                 alt="page_mark"
               />
@@ -97,7 +97,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
           {visibleSection === "three" && (
             <img
-              src={`${process.env.PUBLIC_URL}${pathHome}`}
+              src={`${pathHome}`}
               className="img mb-5"
               alt="page_mark"
             />
@@ -126,7 +126,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
         <img
-          src={`${process.env.PUBLIC_URL}${pathHome}`}
+          src={`${pathHome}`}
           className="img"
           alt=""
         />
@@ -138,7 +138,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
        
 {
   products.map((product) => (
-    <RelatedCard  key={product.id} {...product} />
+    <ProductCard  key={product.id} {...product} />
   ))
 }
  </div>

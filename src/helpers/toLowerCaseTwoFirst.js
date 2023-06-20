@@ -6,6 +6,6 @@ export const toLowerCaseTwoFirst = (cadena) => {
       palabras[1] = palabras[1].charAt(0).toLowerCase() + palabras[1].slice(1);
     }
   
-    return palabras.join(" ");
+    return palabras.join("-");
   }
   
