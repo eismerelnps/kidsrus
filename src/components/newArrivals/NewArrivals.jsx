@@ -8,33 +8,21 @@ import { BestSellers } from "./bestsellers/BestSellers";
 import { JoinUs } from "./joinUs/JoinUs";
 import { SearchBar } from "./search/SearchBar";
 
-
-
 export const NewArrivals = () => {
-
-
-
-  
-  const path = "/assets/main/home-8.png";
-  const imagePath = `${process.env.PUBLIC_URL}.${path}`;
-  
+  const imagePath = "../assets/main/home-8.png";
 
   return (
     <div className="container-fluid">
-
-
-
-
-
-
       <Home />
       <Navbar />
+
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">NEW ARRIVALS</h4>
         <img src={imagePath} className="img" alt="" />
       </div>
+
       <div className="row">
-        <div className="col-4">
+        <div className="col-12 col-xl4">
           <SearchBar />
           <CategoryBox />
           <BestSellers />
