@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="mt-5 text-center">
             <img
-              src={`${process.env.PUBLIC_URL}./assets/main/logo(1).png`}
+              src={`../../assets/main/logo(1).png`}
               className="img mt-5 mb-5"
               alt="page_logo"
             />
@@ -84,10 +84,10 @@ export const Footer = () => {
                 className="nav-link d-inline font_quicksand"
                 href={"privacy_policy"}
               >
-                Privacy Policy
+                Privacy Policy <br />
               </a>
               <p className="d-inline font_gilda_display">
-                / This is a sample website - elnps 2023 / All Rights Reserved
+                  This is a sample website - elnps 2023 / All Rights Reserved
               </p>
             </div>
           </div>

@@ -8,7 +8,7 @@ export const Home = () => {
     <div className="col-8 p-1">
       <div className="position-relative">
         <img
-          src={`${process.env.PUBLIC_URL}./assets/main/slider-1.jpg`}
+          src={`../../../assets/main/slider-1.jpg`}
           className="img-fluid"
           alt="page_logo"
         />
@@ -23,7 +23,7 @@ export const Home = () => {
     </div>
     <div className="col-4 p-1">
       <img
-        src={`${process.env.PUBLIC_URL}./assets/main/girls-power.jpg`}
+        src={`../../../assets/main/girls-power.jpg`}
         className="img-fluid"
         alt="page_logo"
       />
