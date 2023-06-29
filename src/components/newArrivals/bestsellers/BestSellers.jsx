@@ -5,7 +5,9 @@ import { useTopSellingProducts } from "./useTopSellingProducts";
 import { toLowerCaseTwoFirst } from "../../../helpers/toLowerCaseTwoFirst";
 
 export const BestSellers = () => {
+  //Get a list of the most sold products, receive the amount you send by parameters
   const products = useTopSellingProducts(4);
+
   return (
     <div className="mb-5" style={{ cursor: "pointer" }}>
       <h1 className="mb-4 font_francois_one color_mate_blue">BEST SELLERS</h1>
@@ -18,17 +20,19 @@ export const BestSellers = () => {
             products.map(
               ({ id, rating, title, price, images, category }, i) => (
                 <li key={id} className="mb-3">
-                  <div className="d-flex align-items-center">
-                    <div className="col-4">
+                    <div className="row ">
+                    <div className="col-4 px-2 ">
                       <div
-                        className="rounded-circle overflow-hidden"
+                        className="rounded-circle overflow-hidden "
                         style={{ width: "80px", height: "80px" }}
                       >
-                         <img
-                          src={`../../assets/${toLowerCaseTwoFirst(category)}/${images[0].img1}`}
+                        <img
+                          src={`../../assets/${toLowerCaseTwoFirst(category)}/${
+                            images[0].img1
+                          }`}
                           className="img-fluid"
                           alt="page_logo"
-                        /> 
+                        />
                       </div>
                     </div>
                     <div className="col-8">
@@ -48,7 +52,9 @@ export const BestSellers = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                    </div>
+                   
+                 
                 </li>
               )
             )
