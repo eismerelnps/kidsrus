@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9a7de14.css",
-    "main.js": "/static/js/main.b68b66d9.js",
+    "main.css": "/static/css/main.34cb59f8.css",
+    "main.js": "/static/js/main.f3a1c19f.js",
     "static/media/Quicksand-VariableFont_wght.ttf": "/static/media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf",
     "static/media/FrancoisOne-Regular.ttf": "/static/media/FrancoisOne-Regular.eac14538475d205a7761.ttf",
+    "static/media/GildaDisplay-Regular.ttf": "/static/media/GildaDisplay-Regular.5a052d3714f135fceb4f.ttf",
     "static/media/87413583___nlow.jpg": "/static/media/87413583_2660130777540405_5722961474466513534_nlow.46b3a2d8ff61de636f88.jpg",
     "static/media/85051426___nlow.jpg": "/static/media/85051426_2060664737412512_8458893884651247910_nlow.17e3b68b69cee7c371d7.jpg",
     "static/media/87339849_530805007551424__nlow.jpg": "/static/media/87339849_530805007551424_292323017375800029_nlow.1d8b6c5220b6d60f0231.jpg",
@@ -67,11 +68,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/wave1.svg": "/static/media/wave1.dbc035cebe34c4a6b558.svg",
-    "main.c9a7de14.css.map": "/static/css/main.c9a7de14.css.map",
-    "main.b68b66d9.js.map": "/static/js/main.b68b66d9.js.map"
+    "main.34cb59f8.css.map": "/static/css/main.34cb59f8.css.map",
+    "main.f3a1c19f.js.map": "/static/js/main.f3a1c19f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9a7de14.css",
-    "static/js/main.b68b66d9.js"
+    "static/css/main.34cb59f8.css",
+    "static/js/main.f3a1c19f.js"
   ]
 }
