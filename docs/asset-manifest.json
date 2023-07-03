@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c9a7de14.css",
-    "main.js": "/static/js/main.0e6a60a1.js",
+    "main.js": "/static/js/main.b68b66d9.js",
     "static/media/Quicksand-VariableFont_wght.ttf": "/static/media/Quicksand-VariableFont_wght.92e1d0f3321b53e20d2b.ttf",
     "static/media/FrancoisOne-Regular.ttf": "/static/media/FrancoisOne-Regular.eac14538475d205a7761.ttf",
     "static/media/87413583___nlow.jpg": "/static/media/87413583_2660130777540405_5722961474466513534_nlow.46b3a2d8ff61de636f88.jpg",
@@ -68,10 +68,10 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/wave1.svg": "/static/media/wave1.dbc035cebe34c4a6b558.svg",
     "main.c9a7de14.css.map": "/static/css/main.c9a7de14.css.map",
-    "main.0e6a60a1.js.map": "/static/js/main.0e6a60a1.js.map"
+    "main.b68b66d9.js.map": "/static/js/main.b68b66d9.js.map"
   },
   "entrypoints": [
     "static/css/main.c9a7de14.css",
-    "static/js/main.0e6a60a1.js"
+    "static/js/main.b68b66d9.js"
   ]
 }
