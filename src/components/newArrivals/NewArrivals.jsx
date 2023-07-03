@@ -7,6 +7,8 @@ import { Navbar } from "./navbar/NavBar";
 import { BestSellers } from "./bestsellers/BestSellers";
 import { JoinUs } from "./joinUs/JoinUs";
 import { SearchBar } from "./search/SearchBar";
+import { AppBar } from "@mui/material";
+import DrawerAppBar from "./navbar/DrawerAppBar";
 
 export const NewArrivals = () => {
   const imagePath = "../assets/main/home-8.png";

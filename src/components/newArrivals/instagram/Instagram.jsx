@@ -28,7 +28,7 @@ export const Instagram = () => {
           <div key={i} className="col-6 col-xl-2 mb-3">
             <img
               style={{ cursor: "pointer" }}
-              src={imagesSRC(`./${img}`)}
+              src={imagesSRC(`./${ img }`)}
               className="instagram_images img-fluid "
               alt="instagram"
             />
