@@ -8,7 +8,7 @@ export const Navbar = () => {
         <div className="navbar-nav row"></div>
         <div className="row">
         {navbar.map(({ id, title, navTo }) => (
-          <div className="col-6 col-xl-3">
+          <div className="col-6 col-sm-3">
             <CardCircle key={id} id={id} title={title} navTo={navTo} />
 
           </div>

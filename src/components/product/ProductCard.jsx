@@ -52,7 +52,7 @@ export const ProductCard = ({
 
   return (
     <div
-      className={`${size} col-6  mt-1 mb-5`}
+      className={`${size} col-6 col-sm-4  mt-1 mb-5`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

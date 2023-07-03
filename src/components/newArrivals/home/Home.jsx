@@ -8,7 +8,7 @@ import "./home.css";
 export const Home = () => {
   return (
     <div className="row mb-5">
-      <div className="col-12 col-xl-8 p-1">
+      <div className="col-12 col-sm-8 p-1">
         <div className="position-relative">
           <img
             //src={`/docs/assets/main/slider-1.jpg`}
@@ -29,7 +29,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="col-12 col-xl-4 p-1">
+      <div className="col-12 col-sm-4 p-1">
         <img
           //src={`./docs/assets/main/girls-power.jpg`}
           src={`.${home_02}`}

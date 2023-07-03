@@ -24,15 +24,17 @@ export const NewArrivals = () => {
       </div>
 
       <div className="row">
-        <div className="col-12 col-xl-4">
+      
+        <div className="col-12 col-xl-4 ">
           <SearchBar />
           <CategoryBox />
           <BestSellers />
           <JoinUs />
         </div>
-        <div className="col-12 col-xl-8">
+        <div className="col-12 col-xl-8 ">
           <Outlet />{" "}
         </div>
+        
       </div>
       <Instagram />
     </div>
