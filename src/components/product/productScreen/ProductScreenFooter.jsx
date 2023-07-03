@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { Reviews } from "./Reviews";
 import { AddInformation } from "./AddInformation";
-import { ProductList } from "../ProductList";
 import { AddReview } from "../addReview/AddReview";
 import { getProductByCategory } from "../../../helpers/getProductByCategory";
 import { ProductCard } from "../ProductCard";
+
+import submark from "../../../assets/main/home-8.png";
 
 export const ProductScreenFooter = ({
   stockAmount,
@@ -27,7 +28,7 @@ export const ProductScreenFooter = ({
   
 const products =  useMemo(() => getProductByCategory(category), [category]).slice(0, 4);
 
-  const pathHome = "../../assets/main/home-8.png";
+ 
 
   return (
     <div>
@@ -47,7 +48,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
           {visibleSection === "one" && (
             <img
-              src={`${pathHome}`}
+              src={submark}
               className="img mb-5"
               alt="page_mark"
             />
@@ -72,7 +73,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
             {visibleSection === "two" && (
               <img
-                src={`${pathHome}`}
+                src={submark}
                 className="img mb-5"
                 alt="page_mark"
               />
@@ -97,7 +98,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
           {visibleSection === "three" && (
             <img
-              src={`${pathHome}`}
+              src={submark}
               className="img mb-5"
               alt="page_mark"
             />
@@ -126,7 +127,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
         <img
-          src={`${pathHome}`}
+          src={submark}
           className="img"
           alt=""
         />
