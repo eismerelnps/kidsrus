@@ -1,5 +1,8 @@
 import React from "react";
 
+import home_01 from '../../../assets/main/slider-1.jpg'
+import home_02 from '../../../assets/main/girls-power.jpg'
+
 import "./home.css";
 
 export const Home = () => {
@@ -8,7 +11,8 @@ export const Home = () => {
       <div className="col-12 col-xl-8 p-1">
         <div className="position-relative">
           <img
-            src={`/docs/assets/main/slider-1.jpg`}
+            //src={`/docs/assets/main/slider-1.jpg`}
+            src={home_01}
             className="img-fluid"
             alt="page_logo"
           />
@@ -27,7 +31,8 @@ export const Home = () => {
       </div>
       <div className="col-12 col-xl-4 p-1">
         <img
-          src={`./docs/assets/main/girls-power.jpg`}
+          //src={`./docs/assets/main/girls-power.jpg`}
+          src={home_02}
           className="img-fluid"
           alt="page_logo"
         />
