@@ -8,7 +8,7 @@ export const Home = () => {
       <div className="col-12 col-xl-8 p-1">
         <div className="position-relative">
           <img
-            src={`../../assets/main/slider-1.jpg`}
+            src={`/docs/assets/main/slider-1.jpg`}
             className="img-fluid"
             alt="page_logo"
           />
@@ -27,7 +27,7 @@ export const Home = () => {
       </div>
       <div className="col-12 col-xl-4 p-1">
         <img
-          src={`../../assets/main/girls-power.jpg`}
+          src={`./docs/assets/main/girls-power.jpg`}
           className="img-fluid"
           alt="page_logo"
         />

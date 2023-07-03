@@ -24,9 +24,9 @@ export const ProductCard = ({
 
   const joinCategory = toLowerCaseTwoFirst(category);
 
-  const imagePath = `./assets/${joinCategory}/${images[0].img1}`;
+  const imagePath = `/docs/assets/${joinCategory}/${images[0].img1}`;
   const hoverImagePath = images[0].img2
-    ? `../../assets/${joinCategory}/${images[0].img2}`
+    ? `./assets/${joinCategory}/${images[0].img2}`
     : imagePath;
 
   const handleMouseEnter = () => {
