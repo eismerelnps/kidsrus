@@ -7,7 +7,7 @@ import "../../app.css";
 import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
 export const ProductCard = ({
-  size = 'col-xl-3',
+  size = 'col-lg-3',
   title,
   price,
   stockAmount,
@@ -23,8 +23,7 @@ export const ProductCard = ({
   const [hovered, setHovered] = useState(false);
 
   const joinCategory = toLowerCaseTwoFirst(category);
-
-  const imagePath = `./assets/${joinCategory}/${images[0].img1}`;
+  const imagePath = `../../assets/${joinCategory}/${images[0].img1}`;
   const hoverImagePath = images[0].img2
     ? `./assets/${joinCategory}/${images[0].img2}`
     : imagePath;
