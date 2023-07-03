@@ -27,7 +27,7 @@ export const App = () => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+       <Footer /> 
       <CookiesAd />
     </>
   );

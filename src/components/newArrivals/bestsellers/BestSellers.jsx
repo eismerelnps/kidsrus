@@ -27,7 +27,7 @@ export const BestSellers = () => {
                         style={{ width: "80px", height: "80px" }}
                       >
                         <img
-                          src={`../../assets/${toLowerCaseTwoFirst(category)}/${
+                          src={`./assets/${toLowerCaseTwoFirst(category)}/${
                             images[0].img1
                           }`}
                           className="img-fluid"
