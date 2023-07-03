@@ -25,7 +25,7 @@ export const Instagram = () => {
       </div>
       <div className="row justify-content-center">
         {images.map((img, i) => (
-          <div key={i} className="col-6 col-sm-4 col-xl-2 mb-3">
+          <div key={i} className="col-6 col-sm-4 col-lg-2 mb-3">
             <img
               style={{ cursor: "pointer" }}
               src={'.'+imagesSRC(`./${ img }`)}

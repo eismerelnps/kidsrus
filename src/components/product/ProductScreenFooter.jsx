@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
-import { Reviews } from "./Reviews";
-import { AddInformation } from "./AddInformation";
-import { AddReview } from "../addReview/AddReview";
-import { getProductByCategory } from "../../../helpers/getProductByCategory";
-import { ProductCard } from "../ProductCard";
+import { Reviews } from "./productScreen/Reviews";
+import { AddInformation } from "./productScreen/AddInformation";
+import { AddReview } from "./addReview/AddReview";
+import { getProductByCategory } from "../../helpers/getProductByCategory";
+import { ProductCard } from "./ProductCard";
 
-import submark from "../../../assets/main/home-8.png";
+import submark from "../../assets/main/home-8.png";
 
 export const ProductScreenFooter = ({
   stockAmount,

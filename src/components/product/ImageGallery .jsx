@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import "./imagegallery.css";
-import { imageZoom } from "./imageZoom";
-import { toLowerCaseTwoFirst } from "../../../helpers/toLowerCaseTwoFirst";
+import { imageZoom } from "./productScreen/imageZoom";
+import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
 export const ImageGallery = ({ images, category, stockAmount }) => {
 
@@ -37,7 +37,7 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
   }
 
   // Obtener la primera imagen como imagen grande
-  const largeImage = `../assets/${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`;
+  const largeImage = `./assets/${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`;
 
   // Obtener las imágenes restantes para la galería de miniaturas
   const thumbnailImages = Object.values(images[0]);
@@ -79,7 +79,7 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
             <div className="img-zoom-container">
               <img
                 id={`myimage-${index}`}
-                src={`../assets/${toLowerCaseTwoFirst(category)}/${image}`}
+                src={`./assets/${toLowerCaseTwoFirst(category)}/${image}`}
                 alt={`Imagen ${index + 2}`}
                 className="img-fluid"
                 onClick={() => handleImageClick(index)}
