@@ -1,6 +1,8 @@
 import React from "react";
 import "./footer.css";
 
+import logo from '../../assets/main/logo(1).png'
+
 export const Footer = () => {
   return (
     <div className="bg_color_dark_yellow">
@@ -33,7 +35,7 @@ export const Footer = () => {
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="mt-5 text-center">
             <img
-              src={`../../assets/main/logo(1).png`}
+              src={logo}
               className="img mt-5 mb-5"
               alt="page_logo"
             />
