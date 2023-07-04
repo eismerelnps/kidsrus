@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { getProductById } from "../../helpers/getProductById";
 import { Rating } from "../rating/Rating";
@@ -7,8 +7,13 @@ import { AddToCart } from "./buttons/AddToCart";
 import { ProductScreenFooter } from "./ProductScreenFooter";
 import { ImageGallery } from "./ImageGallery ";
 import { AddToWishList } from "./buttons/AddToWishList";
+import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
+
+const imageSRC = require.context("../../assets");
 
 export const ProductScreen = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
   const { productsId } = useParams();
 
   const product = getProductById(productsId);
@@ -32,6 +37,12 @@ export const ProductScreen = () => {
     reviews,
   } = product;
 
+  const largeImage = `.${imageSRC(
+    `./${toLowerCaseTwoFirst(category)}/${
+      images[0]["img" + (selectedImageIndex + 1)]
+    }`
+  )}`;
+
   return (
     <>
       <Breadcrumb category={category} title={title} />
@@ -39,6 +50,9 @@ export const ProductScreen = () => {
         <div className="row mt-5 m-">
           <div className="col-4">
             <ImageGallery
+              largeImage={largeImage}
+              selectedImageIndex={selectedImageIndex}
+              setSelectedImageIndex={setSelectedImageIndex}
               images={images}
               stockAmount={stockAmount}
               category={category}
