@@ -6,7 +6,7 @@ import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
 const imageSRC = require.context("../../assets");
 
-export const ImageGallery = ({ basePath, images, category, stockAmount }) => {
+export const ImageGallery = ({ basePath = '', images, category, stockAmount }) => {
   const [zoomStyle, setZoomStyle] = useState(null);
 
   const handleMouseEnter = () => {
