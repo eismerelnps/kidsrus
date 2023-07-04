@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.34cb59f8.css",
-    "main.js": "/static/js/main.62eb4e06.js",
+    "main.js": "/static/js/main.a698a76f.js",
     "static/media/slider-1.jpg": "/static/media/slider-1.42832d6955bb0164f5ab.jpg",
     "static/media/for-babies-5-1-580x870.jpg": "/static/media/for-babies-5-1-580x870.0a44501ddf7917400178.jpg",
     "static/media/girls-power.jpg": "/static/media/girls-power.74a6b4e3a836e0e5185c.jpg",
@@ -200,10 +200,10 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/wave1.svg": "/static/media/wave1.dbc035cebe34c4a6b558.svg",
     "main.34cb59f8.css.map": "/static/css/main.34cb59f8.css.map",
-    "main.62eb4e06.js.map": "/static/js/main.62eb4e06.js.map"
+    "main.a698a76f.js.map": "/static/js/main.a698a76f.js.map"
   },
   "entrypoints": [
     "static/css/main.34cb59f8.css",
-    "static/js/main.62eb4e06.js"
+    "static/js/main.a698a76f.js"
   ]
 }
