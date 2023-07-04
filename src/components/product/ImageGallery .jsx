@@ -4,6 +4,8 @@ import "./imagegallery.css";
 import { imageZoom } from "./productScreen/imageZoom";
 import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
+const imageSRC = require.context('../../assets')
+
 export const ImageGallery = ({ images, category, stockAmount }) => {
 
 
@@ -37,8 +39,8 @@ export const ImageGallery = ({ images, category, stockAmount }) => {
   }
 
   // Obtener la primera imagen como imagen grande
-  const largeImage = `./assets/${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`;
-
+  //const largeImage = `./assets/${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`;
+  const largeImage = `.${imageSRC(`./${toLowerCaseTwoFirst(category)}/${images[0]["img" + (selectedImageIndex + 1)]}`)}`
   // Obtener las imágenes restantes para la galería de miniaturas
   const thumbnailImages = Object.values(images[0]);
 
