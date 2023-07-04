@@ -25,9 +25,9 @@ export const ProductCard = ({
 }) => {
   const [hovered, setHovered] = useState(false);
 
-  const imagePath =  `${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img1}`)}`
+  const imagePath =  `${basePath}.${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img1}`)}`
   const hoverImagePath = images[0].img2
-    ? `${imagesSRC(`${basePath}./${toLowerCaseTwoFirst(category)}/${images[0].img2}`)}`
+    ? `${basePath}.${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img2}`)}`
     : imagePath;
 
   const handleMouseEnter = () => {
