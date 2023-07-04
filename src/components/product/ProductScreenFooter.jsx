@@ -139,7 +139,7 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
        
 {
   products.map((product) => (
-    <ProductCard  key={product.id} {...product} />
+    <ProductCard basePath="." key={product.id} {...product} />
   ))
 }
  </div>

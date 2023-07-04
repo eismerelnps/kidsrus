@@ -9,6 +9,7 @@ import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 const imagesSRC = require.context('../../assets')
 
 export const ProductCard = ({
+  basePath = '',
   size = 'col-lg-3',
   title,
   price,
@@ -26,7 +27,7 @@ export const ProductCard = ({
 
   const imagePath =  `${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img1}`)}`
   const hoverImagePath = images[0].img2
-    ? `${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img2}`)}`
+    ? `${imagesSRC(`${basePath}./${toLowerCaseTwoFirst(category)}/${images[0].img2}`)}`
     : imagePath;
 
   const handleMouseEnter = () => {
