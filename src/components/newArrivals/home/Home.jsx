@@ -11,8 +11,7 @@ export const Home = () => {
       <div className="col-12 col-sm-8 p-1">
         <div className="position-relative">
           <img
-            //src={`/docs/assets/main/slider-1.jpg`}
-            src={`${home_01}`}
+            src={`.${home_01}`}
             className="img-fluid"
             alt="page_logo"
           />
@@ -32,7 +31,7 @@ export const Home = () => {
       <div className="col-12 col-sm-4 p-1">
         <img
           //src={`./docs/assets/main/girls-power.jpg`}
-          src={`${home_02}`}
+          src={`.${home_02}`}
           className="img-fluid"
           alt="page_logo"
         />
