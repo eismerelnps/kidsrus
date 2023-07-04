@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { /**createBrowserRouter, */ createHashRouter } from "react-router-dom";
 
 import { App } from "../App";
 
@@ -13,7 +13,13 @@ import { ProductScreen } from "../components/product/ProductScreen";
 import { NewArrivals } from "../components/newArrivals/NewArrivals";
 import { ProductRandom } from "../components/product/ProductRandom";
 
-export const router = createBrowserRouter(
+/** using 'createHashRouter' to be able to reload
+ * the page while it is displayed on GitHub pages,
+ * 'createHashRouter' is not recommended,
+ * use'createBrowserRouter' instead when using a real host */
+
+//export const router = createBrowserRouter(
+export const router = createHashRouter(
   [
     {
       path: "/",
@@ -24,7 +30,7 @@ export const router = createBrowserRouter(
           path: "/",
           element: <NewArrivals />,
           children: [
-            // Las rutas anidadas dentro de NewArrivals se definen aquí nuevamente
+            // Routes nested within NewArrivals are defined here again
             {
               path: "/",
               element: <ProductRandom />,
@@ -60,6 +66,6 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/kidsrus",
+    // basename: "/kidsrus",
   }
 );
