@@ -16,7 +16,7 @@ export const CardCircle = ({ id, title, navTo }) => {
               to={navTo}
             >
               <img
-                src={`.${imagesSRC(`./main/navbar/${id}.png`)}`}
+                src={`${imagesSRC(`./main/navbar/${id}.png`)}`}
                 className="card-img-top"
                 alt={title}
               />

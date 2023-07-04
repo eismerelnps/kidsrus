@@ -37,7 +37,7 @@ export const ProductScreen = () => {
     reviews,
   } = product;
 
-  const largeImage = `.${imageSRC(
+  const largeImage = `${imageSRC(
     `./${toLowerCaseTwoFirst(category)}/${
       images[0]["img" + (selectedImageIndex + 1)]
     }`
