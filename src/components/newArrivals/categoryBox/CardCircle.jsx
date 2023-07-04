@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+const imagesSRC = require.context('../../../assets')
+
 export const CardCircle = ({ id, title, navTo }) => {
   return (
     <div className=" card  border-0 mx-xl-5">
@@ -14,7 +16,7 @@ export const CardCircle = ({ id, title, navTo }) => {
               to={navTo}
             >
               <img
-                src={`./assets/main/navbar/${id}.png`}
+                src={`.${imagesSRC(`./main/navbar/${id}.png`)}`}
                 className="card-img-top"
                 alt={title}
               />
