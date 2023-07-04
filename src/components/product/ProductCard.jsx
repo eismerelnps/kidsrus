@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "../../app.css";
 import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
+const imagesSRC = require.context('../../assets')
+
 export const ProductCard = ({
   size = 'col-lg-3',
   title,
@@ -23,7 +25,8 @@ export const ProductCard = ({
   const [hovered, setHovered] = useState(false);
 
   const joinCategory = toLowerCaseTwoFirst(category);
-  const imagePath = `../../assets/${joinCategory}/${images[0].img1}`;
+  //const imagePath = `../../assets/${joinCategory}/${images[0].img1}`;
+  const imagePath =  `.${imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img1}`)}`
   const hoverImagePath = images[0].img2
     ? `./assets/${joinCategory}/${images[0].img2}`
     : imagePath;

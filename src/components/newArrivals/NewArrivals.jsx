@@ -7,11 +7,12 @@ import { Navbar } from "./navbar/NavBar";
 import { BestSellers } from "./bestsellers/BestSellers";
 import { JoinUs } from "./joinUs/JoinUs";
 import { SearchBar } from "./search/SearchBar";
-import { AppBar } from "@mui/material";
-import DrawerAppBar from "./navbar/DrawerAppBar";
+
+import submark from '../../assets/main/home-8.png'
+//import { AppBar } from "@mui/material";
+//import DrawerAppBar from "./navbar/DrawerAppBar";
 
 export const NewArrivals = () => {
-  const imagePath = "../assets/main/home-8.png";
 
   return (
     <div className="container-fluid">
@@ -20,7 +21,7 @@ export const NewArrivals = () => {
 
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">NEW ARRIVALS</h4>
-        <img src={imagePath} className="img" alt="" />
+        <img src={submark} className="img" alt="" />
       </div>
 
       <div className="row">

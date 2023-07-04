@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useTopSellingProducts } from "./useTopSellingProducts";
 import { toLowerCaseTwoFirst } from "../../../helpers/toLowerCaseTwoFirst";
 
+const imagesSRC = require.context("../../../assets")
+
 export const BestSellers = () => {
   //Get a list of the most sold products, receive the amount you send by parameters
   const products = useTopSellingProducts(4);
@@ -27,9 +29,8 @@ export const BestSellers = () => {
                         style={{ width: "80px", height: "80px" }}
                       >
                         <img
-                          src={`./assets/${toLowerCaseTwoFirst(category)}/${
-                            images[0].img1
-                          }`}
+                        //  src={imagesSRC(toLowerCaseTwoFirst(category)/images[0].img1)}
+                         src={'.'+imagesSRC(`./${toLowerCaseTwoFirst(category)}/${images[0].img1}`)}
                           className="img-fluid"
                           alt="page_logo"
                         />
