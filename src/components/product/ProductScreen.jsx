@@ -7,11 +7,9 @@ import { AddToCart } from "./buttons/AddToCart";
 import { ProductScreenFooter } from "./ProductScreenFooter";
 import { ImageGallery } from "./ImageGallery ";
 import { AddToWishList } from "./buttons/AddToWishList";
-import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
-
+// import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
 export const ProductScreen = () => {
-
   const { productsId } = useParams();
 
   const product = getProductById(productsId);
@@ -35,8 +33,6 @@ export const ProductScreen = () => {
     reviews,
   } = product;
 
- 
-
   return (
     <>
       <Breadcrumb category={category} title={title} />
@@ -44,7 +40,6 @@ export const ProductScreen = () => {
         <div className="row mt-5 m-">
           <div className="col-4">
             <ImageGallery
-              basePath="."
               images={images}
               stockAmount={stockAmount}
               category={category}
