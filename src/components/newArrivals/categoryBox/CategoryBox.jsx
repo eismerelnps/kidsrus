@@ -19,12 +19,15 @@ export const CategoryBox = () => {
           {
           categotyBox.map(({ id, title, navTo, amount }) => (
             <li key={title} className="category_box_item list-group-item color_mate_blue ">
-              <div className="row bg-purple">
-                <NavLink className="category_box_item_text nav-item nav-link col-10" to={navTo}>
-                  {title}
+              
+                <NavLink className="category_box_item_text nav-item nav-link" to={navTo}>
+                <div className="row bg-purple">
+                  <p className="col-10 ">{title}</p>
+                  <p className="col-2 ">({amount})</p>
+                  </div>
                 </NavLink>
-                <p className="col-2 ">({amount})</p>
-              </div>
+                
+             
             </li>
           ))
           }
