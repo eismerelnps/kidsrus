@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Favorite } from "../buttons/Favorite";
 import { FavCartSearch } from "../buttons/FavCartSearch";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../../app.css";
 import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
@@ -64,7 +63,7 @@ export const ProductCard = ({
 
   return (
     <div
-      className={`${size} col-6 col-sm-4  mt-1 mb-5`}
+      className={`${size} col-6 col-sm-4  mt-1 mb-lg-5 mb-2 d-block-sm-none z-index-500`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -105,24 +104,23 @@ export const ProductCard = ({
               </>
             )}
 
-            {stockAmount === 0 ? (
+            {stockAmount === 0 && (
               <>
                 <div className="position-absolute top-0 end-0 m-lg-1 m-1">
-                  <p className="text-uppercase  text-wrap outOfStockBtn bg-light rounded-5 color_light_blue font_francois_one px-lg-3 fs-6">
+                  <p className="text-uppercase  text-wrap outOfStockBtn bg-light rounded-5 color_orange font_francois_one px-lg-3 px-1 fs-6">
                     OUT OF STOCK
                   </p>
                 </div>
-                {hovered && (
-                  <Favorite handleAddToWishList={handleAddToWishList} />
-                )}
               </>
-            ) : hovered && stockAmount > 0 ? (
+            )}
+            {hovered && (
               <FavCartSearch
+                stockAmount={stockAmount}
                 handleAddToCart={handleAddToCart}
                 handleAddToWishList={handleAddToWishList}
                 handleSearch={handleOpenProductScreen}
               />
-            ) : null}
+            )}
           </div>
           <div className="card-body text-center">
             <p className="card-subtitle color_orange mb-2 font_quicksand">
@@ -132,7 +130,6 @@ export const ProductCard = ({
             <h4 className="fs-6 text-wrap card-title color_mate_blue font_gilda_display mb-2">
               {title}
             </h4>
-
 
             {stockAmount !== 0 && (
               <p className="card-text color_mate_blue font_francois_one">
