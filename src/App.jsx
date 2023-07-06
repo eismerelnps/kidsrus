@@ -20,8 +20,9 @@ export const App = () => {
           </p>
         </div>
       </div>
-      <div className="  px-5">
+      <div className=" container-lg px-5">
         <Header />
+       
         <div className="">
          <Outlet />
         </div>

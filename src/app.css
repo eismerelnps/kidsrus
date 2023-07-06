@@ -1,18 +1,17 @@
-
-
 @font-face {
-  font-family: "Francois_One";
-  src: url("./assets/fonts/Francois_One/FrancoisOne-Regular.ttf") format("ttf");
+  font-family: 'Francois_One';
+  src: url(./assets/fonts/Francois_One/FrancoisOne-Regular.ttf);
 }
 
 @font-face {
   font-family: "Gilda_Display";
-  src: url("./assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf") format("ttf");
+  src: url(./assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf)
+  
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url("./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf") format("ttf");
+  src: url(./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
 
 .font_gilda_display {
