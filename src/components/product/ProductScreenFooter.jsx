@@ -129,11 +129,11 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
         <img
           src={submark}
           className="img"
-          alt=""
+          alt="sub-mark"
         />
       </div>
 
-      <div className="container p-5">
+      <div className="container p-lg-5">
         <div className="row">
 
        
