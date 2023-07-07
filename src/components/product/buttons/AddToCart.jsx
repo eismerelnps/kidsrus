@@ -1,15 +1,49 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "../../../hooks/useForm";
+import { AppContext } from "../../../app/appContext";
+import { types } from "../../../types/types";
+import { useParams } from "react-router-dom";
 
 export const AddToCart = () => {
-  const [formValues, handdleInputChange, reset] = useForm({
+  const productID = useParams();
+
+  const { user, dispatch } = useContext(AppContext);
+
+  const [formValues, handleInputChange, reset] = useForm({
     amount: 1,
   });
-
   const { amount } = formValues;
 
-  const handdAddToCart = (e) => {
-    e.preventDefault();
+  const [userCart, setUserCart] = useState({
+    count: user.cart.count,
+    items: user.cart.items,
+  });
+
+  const handleAddToCart = ( amount ) => {
+ 
+    const updatedCount = parseInt(user.cart.count, 10) + parseInt(amount);
+    const updatedItems = [...userCart.items, productID];
+
+    setUserCart({
+      count: updatedCount,
+      items: updatedItems
+    });
+
+    const updatedUser = {
+      ...user,
+      cart: {
+        count: updatedCount,
+        items: updatedItems
+      }
+    };
+
+    const addToCartAction = {
+      type: types.addToCart,
+      payload: updatedUser
+    };
+
+    dispatch(addToCartAction);
+
     console.log(`Added ${amount} products to cart`);
     reset();
   };
@@ -27,16 +61,16 @@ export const AddToCart = () => {
                 className="form-control form-light border-0 rounded-0 font_quicksand border-secondary"
                 value={amount}
                 autoComplete="off"
-                onChange={handdleInputChange}
+                onChange={handleInputChange}
               />
             </div>
           </div>
           <div className="col-8 d-flex">
             <div className="bg_color_orange p-1 flex-grow-1">
               <button
-                type="submit"
+                type="button"
                 className="submit_btn border_white_dashed_own rounded-0 btn text-light font_francois_one w-100"
-                onClick={handdAddToCart}
+                onClick={() => handleAddToCart(amount)}
               >
                 ADD TO CART
               </button>

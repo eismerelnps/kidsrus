@@ -1,8 +1,8 @@
 import { useEffect, useReducer } from "react";
-import { AuthContext } from "./auth/authContext";
+import { AppContext } from "./app/appContext";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/appRouter";
-import { authReducer } from "./auth/authReducer";
+import { appReducer } from "./app/appReducer";
 
 export const AppIndex = () => {
   const init = () => {
@@ -14,20 +14,20 @@ export const AppIndex = () => {
       }
     );
   };
-  const [user, dispatch] = useReducer(authReducer, {}, init);
+  const [user, dispatch] = useReducer(appReducer, {}, init);
 
   useEffect(() => {
     if (!user) return;
     localStorage.setItem("user", JSON.stringify(user));
-  }, [user]);
+  }, [user]); 
   return (
-    <AuthContext.Provider
+    <AppContext.Provider
       value={{
         user,
         dispatch,
       }}
     >
       <RouterProvider router={router} />
-    </AuthContext.Provider>
+    </AppContext.Provider>
   );
 };

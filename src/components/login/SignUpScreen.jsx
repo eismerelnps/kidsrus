@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../auth/authContext";
+import { AppContext } from "../../app/appContext";
 import { types } from "../../types/types";
 
 export const SignUpScreen = () => {
   const navigate = useNavigate();
-  const { dispatch } = useContext(AuthContext);
+  const {user, dispatch } = useContext(AppContext);
 
   const handleSignUp = () => {
     const action = {
       type: types.login,
       payload: {
+        ...user,
         name: "Eismer",
-        cart: { count: 0, items: [] },
-        wishList: { count: 0, items: [] },
-        chipojo: 'enano',
+       // cart: { count: 0, items: [] },
+        // wishList: { count: 0, items: [] },
       },
     };
     dispatch(action);

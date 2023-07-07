@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FavCartSearch } from "../buttons/FavCartSearch";
 import { useNavigate } from "react-router-dom";
 
@@ -25,6 +25,8 @@ export const ProductCard = ({
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
 
+  //const [wishListAmount, setWishListAmount] = useState(user.wishList.count);
+
   const handleOpenProductScreen = () => {
     //checks IF THE product card is hovered, so when it is on small screens users can make a first click and then be able to enter the product screen
     hovered ? navigate(`/product/${id}`) : setHovered(true);
@@ -50,6 +52,7 @@ export const ProductCard = ({
 
   const handleAddToCart = () => {
     console.log("Add to cart");
+
     // make needed actions in order to adding to cart
   };
   const handleAddToWishList = () => {

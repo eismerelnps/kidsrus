@@ -24,7 +24,10 @@ export const SearchBar = () => {
   };
 
   return (
-    <div className="mb-5 searchBar_container">
+    <div 
+    className="mb-5 searchBar_container"
+    id="searchBar_container"
+    >
       <form className="d-flex border-0 rounded-0" onSubmit={handdleSubmit}>
         <input
           type="text"

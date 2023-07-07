@@ -6,10 +6,10 @@ import logo from "../../assets/main/logo.png";
 import "./ui.css";
 import { DrawerAppBar } from "../newArrivals/navbar/DrawerAppBar";
 import { useContext } from "react";
-import { AuthContext } from "../../auth/authContext";
+import { AppContext } from "../../app/appContext";
 
 export const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useContext(AppContext);
 
   return (
     <div className="mb-5">

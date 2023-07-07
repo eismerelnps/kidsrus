@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { getProductById } from "../../helpers/getProductById";
 import { Rating } from "../rating/Rating";
