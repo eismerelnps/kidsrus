@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.34cb59f8.css",
-    "main.js": "/static/js/main.07840b94.js",
+    "main.css": "/static/css/main.61d941a2.css",
+    "main.js": "/static/js/main.1eca3fea.js",
+    "static/media/home.png": "/static/media/home.2522f358aea48db9bafb.png",
     "static/media/slider-1.jpg": "/static/media/slider-1.42832d6955bb0164f5ab.jpg",
     "static/media/for-babies-5-1-580x870.jpg": "/static/media/for-babies-5-1-580x870.0a44501ddf7917400178.jpg",
     "static/media/girls-power.jpg": "/static/media/girls-power.74a6b4e3a836e0e5185c.jpg",
@@ -102,6 +103,7 @@
     "static/media/boys-6-1-580x870.jpg": "/static/media/boys-6-1-580x870.19150cfbe5ddb64b62bd.jpg",
     "static/media/for-home-4-580x870.jpg": "/static/media/for-home-4-580x870.ee803e708bba616c9086.jpg",
     "static/media/toys-6-580x870.jpg": "/static/media/toys-6-580x870.e45f40b2baeb04e84775.jpg",
+    "static/media/logo.png": "/static/media/logo.63ade4635434480b09db.png",
     "static/media/for-home-9-1-580x870.jpg": "/static/media/for-home-9-1-580x870.2cd0341302e59f357a6a.jpg",
     "static/media/for-home-11-1-580x870.jpg": "/static/media/for-home-11-1-580x870.9c567e17e038b81e9e6c.jpg",
     "static/media/toys-1-580x870.jpg": "/static/media/toys-1-580x870.50a11012d7cefd30f0a7.jpg",
@@ -199,11 +201,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/wave1.svg": "/static/media/wave1.dbc035cebe34c4a6b558.svg",
-    "main.34cb59f8.css.map": "/static/css/main.34cb59f8.css.map",
-    "main.07840b94.js.map": "/static/js/main.07840b94.js.map"
+    "main.61d941a2.css.map": "/static/css/main.61d941a2.css.map",
+    "main.1eca3fea.js.map": "/static/js/main.1eca3fea.js.map"
   },
   "entrypoints": [
-    "static/css/main.34cb59f8.css",
-    "static/js/main.07840b94.js"
+    "static/css/main.61d941a2.css",
+    "static/js/main.1eca3fea.js"
   ]
 }
