@@ -1,4 +1,4 @@
-import { /**createBrowserRouter, */ createHashRouter } from "react-router-dom";
+import { /**createBrowserRouter, */  createHashRouter } from "react-router-dom";
 
 import { App } from "../App";
 
@@ -12,6 +12,8 @@ import ErrorPage from "../components/errorPage/ErrorPage";
 import { ProductScreen } from "../components/product/ProductScreen";
 import { NewArrivals } from "../components/newArrivals/NewArrivals";
 import { ProductRandom } from "../components/product/ProductRandom";
+import { PublicRoute } from "./PublicRoute";
+import { SignUpScreen } from "../components/login/SignUpScreen";
 
 /** using 'createHashRouter' to be able to reload
  * the page while it is displayed on GitHub pages,
@@ -21,6 +23,14 @@ import { ProductRandom } from "../components/product/ProductRandom";
 //export const router = createBrowserRouter(
 export const router = createHashRouter(
   [
+    {
+      path: '/login',
+      element: (
+        <PublicRoute>
+          <SignUpScreen/>
+        </PublicRoute>
+      )
+    },
     {
       path: "/",
       element: <App />,

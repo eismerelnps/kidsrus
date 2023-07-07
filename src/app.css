@@ -1,31 +1,31 @@
 @font-face {
-  font-family: 'Francois_One';
-  src: url("./assets/fonts/Francois_One/FrancoisOne-Regular.ttf")
+  font-family: Francois_One;
+  src: url(./assets/fonts/Francois_One/FrancoisOne-Regular.ttf)
 }
 
 
 @font-face {
-  font-family: "Gilda_Display";
-  src: url("./assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf")
+  font-family: Gilda_Display;
+  src: url(./assets/fonts/Gilda_Display/GildaDisplay-Regular.ttf)
   
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf")
+  font-family: Quicksand;
+  src: url(./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf)
 
 }
 
 .font_gilda_display {
-  font-family: "Gilda_Display";
+  font-family: Gilda_Display;
 }
 
 .font_francois_one {
-  font-family: "Francois_One";
+  font-family: Francois_One;
 }
 
 .font_quicksand {
-  font-family: "Quicksand";
+  font-family: Quicksand;
 }
 
 .border_gray_dashed_own {
