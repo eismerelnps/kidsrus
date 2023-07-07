@@ -14,7 +14,7 @@ export const SignUpScreen = () => {
         ...user,
         name: "Eismer",
        // cart: { count: 0, items: [] },
-        // wishList: { count: 0, items: [] },
+         wishList: { count: 0, items: [] },
       },
     };
     dispatch(action);
