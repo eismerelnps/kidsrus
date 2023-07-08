@@ -5,7 +5,7 @@ import { types } from "../../../types/types";
 import { useParams } from "react-router-dom";
 
 export const AddToCart = () => {
-  const productID = useParams();
+  const { productsId } = useParams();
 
   const { user, dispatch } = useContext(AppContext);
 
@@ -19,33 +19,69 @@ export const AddToCart = () => {
     items: user.cart.items,
   });
 
-  const handleAddToCart = ( amount ) => {
- 
-    const updatedCount = parseInt(user.cart.count, 10) + parseInt(amount);
-    const updatedItems = [...userCart.items, productID];
-
-    setUserCart({
-      count: updatedCount,
-      items: updatedItems
-    });
-
-    const updatedUser = {
-      ...user,
-      cart: {
+  const handleAddToCart = (amount) => {
+    const productId = productsId;
+  
+    const existingItem = userCart.items.find((item) => item.id === productId);
+  
+    if (existingItem) {
+      const updatedItems = userCart.items.map((item) =>
+        item.id === productId
+          ? { ...item, quantity: item.quantity + parseInt(amount) }
+          : item
+      );
+  
+      const updatedCount = userCart.count + parseInt(amount);
+  
+      setUserCart({
         count: updatedCount,
-        items: updatedItems
-      }
-    };
-
-    const addToCartAction = {
-      type: types.addToCart,
-      payload: updatedUser
-    };
-
-    dispatch(addToCartAction);
-
-    console.log(`Added ${amount} products to cart`);
-    reset();
+        items: updatedItems,
+      });
+  
+      const updatedUser = {
+        ...user,
+        cart: {
+          count: updatedCount,
+          items: updatedItems,
+        },
+      };
+  
+      const addToCartAction = {
+        type: types.addToCart,
+        payload: updatedUser,
+      };
+  
+      dispatch(addToCartAction);
+  
+      reset();
+      //console.log(`Added ${amount} products to cart`);
+    } else {
+      const updatedCount = parseInt(user.cart.count, 10) + parseInt(amount);
+      const updatedItems = [...userCart.items, { id: productId, quantity: parseInt(amount) }];
+  
+      setUserCart({
+        count: updatedCount,
+        items: updatedItems,
+      });
+  
+      const updatedUser = {
+        ...user,
+        cart: {
+          count: updatedCount,
+          items: updatedItems,
+        },
+      };
+  
+      const addToCartAction = {
+        type: types.addToCart,
+        payload: updatedUser,
+      };
+  
+      dispatch(addToCartAction);
+  
+      reset();
+      //console.log(`Added ${amount} products to cart`);
+    }
   };
 
   return (

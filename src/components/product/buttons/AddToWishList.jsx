@@ -14,9 +14,9 @@ export const AddToWishList = () => {
   });
 
   const handleAddToWishList = () => {
-    
+
     if (userWishList.items.some((item) => item === productsId)) {
-      console.log(`Product with ID ${productsId} is already in the wishlist`);
+      //console.log(`Product with ID ${productsId} is already in the wishlist`);
       return;
     }
 

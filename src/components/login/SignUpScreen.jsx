@@ -13,7 +13,7 @@ export const SignUpScreen = () => {
       payload: {
         ...user,
         name: "Eismer",
-       // cart: { count: 0, items: [] },
+        cart: { count: 0, items: [] },
          wishList: { count: 0, items: [] },
       },
     };
