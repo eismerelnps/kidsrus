@@ -1,6 +1,6 @@
 import React from "react";
 import { Rating } from "../../rating/Rating";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useTopSellingProducts } from "./useTopSellingProducts";
 import { toLowerCaseTwoFirst } from "../../../helpers/toLowerCaseTwoFirst";
 
@@ -22,7 +22,9 @@ export const BestSellers = () => {
             products.map(
               ({ id, rating, title, price, images, category }, i) => (
                 <li key={id} className="mb-3">
-                    <div className="row ">
+                  <NavLink
+                  className='text-decoration-none'
+                  to={`/product/${id}`}>                   <div className="row ">
                     <div className="col-4 px-2 ">
                       <div
                         className="rounded-circle overflow-hidden "
@@ -56,6 +58,8 @@ export const BestSellers = () => {
                     </div>
                    
                  
+                    </NavLink>
+ 
                 </li>
               )
             )
