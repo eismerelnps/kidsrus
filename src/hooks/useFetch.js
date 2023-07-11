@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = ({ method, url, body }) => {
+export const useFetch = ({ method, url, headers = "", body = "" }) => {
   console.log("fetch fetching");
 
   const [state, setState] = useState({
@@ -18,6 +18,8 @@ export const useFetch = ({ method, url, body }) => {
 
     fetch(url, {
       method: method,
+      headers: headers,
+      body: body,
     })
       .then((response) => response.json())
       .then((data) => {
@@ -35,6 +37,6 @@ export const useFetch = ({ method, url, body }) => {
           data: null,
         });
       });
-  }, [url]);
+  }, [url, method, body, headers]);
   return state;
 };
