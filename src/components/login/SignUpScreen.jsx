@@ -6,6 +6,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { useForm } from "../../hooks/useForm";
 
 import AlertDialog from "../feedBack/AlertDialog";
+import SimpleBackdrop from "../feedBack/SimpleBackDrop";
 
 export const SignUpScreen = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -56,18 +57,7 @@ export const SignUpScreen = () => {
       })
 
       .then(() => {
-        // const action = {
-        //   type: types.login,
-        //   payload: {
-        //     ...user,
-        //     username: username,
-        //     cart: { count: 0, items: [] },
-        //     wishList: { count: 0, items: [] },
-        //   },
-        // };
-        // dispatch(action);
-
-        // const lastPath = localStorage.getItem("lastPath") || "/";
+       
 
         navigate('/signin', {
           replace: true,
@@ -81,7 +71,7 @@ export const SignUpScreen = () => {
 
   return (
     <div className="container text-center">
-      {/* {openDialog && <AlertDialog />} */}
+     {openDialog && <SimpleBackdrop />}
 
       <h1 className="font_francois_one color_mate_blue">Sign Up</h1>
 

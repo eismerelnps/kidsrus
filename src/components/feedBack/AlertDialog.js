@@ -1,19 +1,17 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import { Box } from '@mui/material';
-import CircularProgress from '@mui/material/CircularProgress';
+import { BestSellers } from '../newArrivals/bestsellers/BestSellers';
 
-export default function AlertDialog( ) {
-  const [open, setOpen] = React.useState(true);
+export default function AlertDialog({title, description, open, setOpen }) {
+  
+  //const [open, setOpen] = React.useState(true);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = () => {
     setOpen(false);
@@ -29,20 +27,19 @@ export default function AlertDialog( ) {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+       >
+      {/* //   <DialogTitle id="alert-dialog-title">
+      //     {title}
+      //   </DialogTitle> */}
 
 
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            <BestSellers title='WishList' products={description}/>
           </DialogContentText>
         </DialogContent>
         <Box sx={{ display: 'flex' }}>
-      <CircularProgress />
+      {/* <CircularProgress /> */}
     </Box>
 
 {/* 

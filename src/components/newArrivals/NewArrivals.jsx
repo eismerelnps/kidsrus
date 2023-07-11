@@ -8,12 +8,14 @@ import { BestSellers } from "./bestsellers/BestSellers";
 import { JoinUs } from "./joinUs/JoinUs";
 import { SearchBar } from "./search/SearchBar";
 
-import submark from '../../assets/main/home-8.png'
+import submark from "../../assets/main/home-8.png";
+import { useTopSellingProducts } from "./bestsellers/useTopSellingProducts";
 //import { AppBar } from "@mui/material";
 //import DrawerAppBar from "./navbar/DrawerAppBar";
 
 export const NewArrivals = () => {
-
+  //Get a list of the most sold products, receive the amount you send by parameters
+  const products = useTopSellingProducts(4);
   return (
     <div className="container-fluid">
       <Home />
@@ -25,17 +27,15 @@ export const NewArrivals = () => {
       </div>
 
       <div className="row">
-      
         <div className="col-12 col-lg-4 ">
           <SearchBar />
           <CategoryBox />
-          <BestSellers />
+          <BestSellers title='BEST SELLERS' products={products}/>
           <JoinUs />
         </div>
         <div className="col-12 col-lg-8 ">
           <Outlet />{" "}
         </div>
-        
       </div>
       <Instagram />
     </div>
