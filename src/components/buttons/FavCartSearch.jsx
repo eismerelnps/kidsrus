@@ -5,7 +5,7 @@ export const FavCartSearch = ({
   handleSearch,
 }) => {
   return (
-    <div className=" bg_color_dark_orange d-flex position-absolute bottom-0 start-0 animate__animated animate__fadeInUp  p-1 w-100  z-index-1000">
+    <div className="bg_color_dark_orange d-flex position-absolute bottom-0 start-0 animate__animated animate__fadeInUp  p-1 w-100  z-index-1000" tabIndex={'100'}>
       <div className="border_white_dashed_own  text-light justify-content-center text-center p--1 w-100 ">
         {stockAmount > 0 ? (
           <>

@@ -1,3 +1,6 @@
+* {
+  box-sizing: content-box;
+}
 @font-face {
   font-family: Francois_One;
   src: url(./assets/fonts/Francois_One/FrancoisOne-Regular.ttf)
@@ -54,7 +57,9 @@
 .bg_color_dark_yellow {
   background-color: #e2a336;
 }
-
+.bg_color_mate_blue {
+  background: #29458bda;
+}
 .color_dark_orange {
   color: #e05a35d2;
 }

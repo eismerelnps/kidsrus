@@ -12,6 +12,8 @@ export const appReducer = (state = {}, action) => {
       return {
         logged: false,
       };
+
+      
       case types.addToCart:
         return {
           ...action.payload,
