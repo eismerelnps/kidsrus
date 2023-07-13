@@ -13,33 +13,44 @@ import AlertDialog from "../feedBack/AlertDialog";
 import { getProductById } from "../../helpers/getProductById";
 
 export const Header = () => {
-  const [openDialog, setOpenDialog] = useState(false);
-  const { user } = useContext(AppContext);
+  const { user } = useContext(AppContext) ;
 
-  //console.log(user.wishList.items)
-  const products = user.wishList.items.map((id) => (
+  
+   //console.log(user.wishList.items)
+   const wishListProducts = user.wishList.items.map((id) => (
     getProductById(id)
   ))
+  const cartProducts = user.cart.items.map((product) => (
+    getProductById(product.id)
+  ))
   
+  const [wishList, setWishList] = useState(false);
+  const [cart, setCart] = useState(false);
+  
+ 
+
+ 
 
   return (
     <div className="mb-5">
-     {openDialog &&  <AlertDialog title='products in wish' description={products} open= {openDialog} setOpen={setOpenDialog}/>}
+     {wishList &&  <AlertDialog title={'Wish List'} description={wishListProducts} open= {wishList} setOpen={setWishList}/>}
+     {cart &&  <AlertDialog title={'Cart'} description={cartProducts} open= {cart} setOpen={setCart}/>}
+
       <div className="text-center">
         <img src={logo} className="img mb-5" alt="page_logo" />
       </div>
       <Avatar sx={{ bgcolor: deepOrange[500] }}></Avatar>
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-center">
 
 
-      <i className="fa-regular fa-heart p-2 mx-1 color_mate_blue position-relative "  onClick={() => setOpenDialog(true)}>
+      <i className="fa-regular fa-heart p-2 mx-1 color_mate_blue position-relative "  onClick={() => setWishList(true)}>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           {user.wishList.count}
           <span className="visually-hidden">Products in wish-list</span>
         </span>
       </i>
 
-      <i className="fa-solid fa-cart-shopping p-2 mx-1 color_mate_blue position-relative">
+      <i className="fa-solid fa-cart-shopping p-2 mx-1 color_mate_blue position-relative" onClick={() => setCart(true)}>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
           {user.cart.count}
           <span className="visually-hidden">Products in cart</span>

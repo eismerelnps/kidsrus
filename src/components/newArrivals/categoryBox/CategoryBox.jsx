@@ -13,7 +13,7 @@ export const CategoryBox = () => {
     style={{cursor: "pointer"}}
 
     >
-      <h1 className="mb-4 font_francois_one color_mate_blue">CATEGORIES</h1>
+      <h1 className="mb-4 font_francois_one color_mate_blue text-center">CATEGORIES</h1>
       <div className="font_francois_one">
         <ul className="border_gray_dashed_own list-group list-group-flush p-3">
           {

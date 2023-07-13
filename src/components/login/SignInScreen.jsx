@@ -3,7 +3,6 @@ import { useForm } from "../../hooks/useForm";
 import { types } from "../../types/types";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../app/appContext";
-import AlertDialog from "../feedBack/AlertDialog";
 import SimpleBackdrop from "../feedBack/SimpleBackDrop";
 
 export const SignInScreen = () => {
@@ -19,7 +18,7 @@ export const SignInScreen = () => {
 
   const { username, password, repassword, email, number } = formValues;
 
-  const url = "http://localhost:8787/api/v1/users/login";
+  const url = "https://kidsrus-backend-node.onrender.com/api/v1/users/login";
 
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AppContext);

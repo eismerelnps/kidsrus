@@ -2,10 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../app/appContext";
 import { types } from "../../types/types";
-import { useFetch } from "../../hooks/useFetch";
 import { useForm } from "../../hooks/useForm";
 
-import AlertDialog from "../feedBack/AlertDialog";
 import SimpleBackdrop from "../feedBack/SimpleBackDrop";
 
 export const SignUpScreen = () => {
@@ -21,7 +19,7 @@ export const SignUpScreen = () => {
 
   const { username, password, repassword, email, number } = formValues;
 
-  const url = "http://localhost:8787/api/v1/users/create-user";
+  const url = "https://kidsrus-backend-node.onrender.com/api/v1/users/create-user";
 
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AppContext);

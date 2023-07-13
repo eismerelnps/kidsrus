@@ -13,15 +13,22 @@ export const appReducer = (state = {}, action) => {
         logged: false,
       };
 
-      
-      case types.addToCart:
-        return {
-          ...action.payload,
-        }
-        case types.addToWishList:
-          return {
-            ...action.payload,
-          }
+    case types.addToCart:
+      return {
+        ...action.payload,
+      };
+    case types.addToWishList:
+      return {
+        ...action.payload,
+      };
+      case types.lessToCart:
+      return {
+        ...action.payload,
+      }
+      case types.lessToWishList:
+      return {
+        ...action.payload,
+      }
     default:
       return state;
   }

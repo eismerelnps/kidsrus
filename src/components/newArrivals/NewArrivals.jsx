@@ -30,7 +30,7 @@ export const NewArrivals = () => {
         <div className="col-12 col-lg-4 ">
           <SearchBar />
           <CategoryBox />
-          <BestSellers title='BEST SELLERS' products={products}/>
+          <BestSellers title={'BEST SELLERS'} products={products}/>
           <JoinUs />
         </div>
         <div className="col-12 col-lg-8 ">

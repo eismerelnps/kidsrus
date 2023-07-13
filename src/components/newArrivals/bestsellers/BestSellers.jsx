@@ -8,13 +8,13 @@ const imagesSRC = require.context("../../../assets");
 export const BestSellers = ({ title, products }) => {
   return (
     <div className="mb-5" style={{ cursor: "pointer" }}>
-      <h1 className="mb-4 font_francois_one color_mate_blue">{title}</h1>
+      <h1 className="mb-4 font_francois_one color_mate_blue text-center">{title}</h1>
       <div className="font_francois_one">
         <ul
           className="border_gray_dashed_own list-group list-group-flush p-3"
           style={{ listStyle: "none" }}
         >
-          {products.length > 0 ? (
+          {products ? (
             products.map(
               ({ id, rating, title, price, images, category }, i) => (
                 <li key={id} className="mb-3">
