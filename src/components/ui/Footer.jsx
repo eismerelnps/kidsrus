@@ -1,12 +1,12 @@
 import React from "react";
-import "./footer.css";
+
 
 import logo from '../../assets/main/logo(1).png'
 
 export const Footer = () => {
   return (
     <div className="bg_color_dark_yellow">
-      <div className="wave-container">
+      
       {/* <svg
   width="100%"
   height="100%"
@@ -29,9 +29,9 @@ export const Footer = () => {
   </g>
 </svg> */}
 
-      </div>
+     
 
-      <div className="row">
+     
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="mt-5 text-center">
             <img
@@ -95,6 +95,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };

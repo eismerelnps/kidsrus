@@ -14,7 +14,7 @@ import { NewArrivals } from "../components/newArrivals/NewArrivals";
 import { ProductRandom } from "../components/product/ProductRandom";
 import { PublicRoute } from "./PublicRoute";
 import { SignUpScreen } from "../components/login/SignUpScreen";
-import { SignInScreen } from "../components/login/SignInScreen";
+import { SignInContainer } from "../components/login/SignInContainer";
 
 /** using 'createHashRouter' to be able to reload
  * the page while it is displayed on GitHub pages,
@@ -36,7 +36,7 @@ export const router = createHashRouter(
       path: '/signin',
       element: (
         <PublicRoute>
-          <SignInScreen />
+          <SignInContainer />
         </PublicRoute>
       )
     },
