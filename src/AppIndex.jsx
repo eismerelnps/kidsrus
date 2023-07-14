@@ -1,39 +1,37 @@
-import { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import { AppContext } from "./app/appContext";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/appRouter";
 import { appReducer } from "./app/appReducer";
-import { useFetch } from "./hooks/useFetch";
+
+const USER_LOCAL_STORAGE_KEY = "user";
+
+const init = () => {
+  const storedUser = localStorage.getItem(USER_LOCAL_STORAGE_KEY);
+  if (storedUser) {
+    return {
+      ...JSON.parse(storedUser),
+      cart: { count: 0, items: [] },
+      wishList: { count: 0, items: [] },
+    };
+  }
+
+  return {
+    logged: false,
+    cart: { count: 0, items: [] },
+    wishList: { count: 0, items: [] },
+  };
+};
 
 export const AppIndex = () => {
-  const url = "http://localhost:8787/api/v1/users/";
-
-  //const { loading, data, error } = useFetch({ method: "GET", url });
-
-  const init = () => {
-
-    return (
-
-      JSON.parse(localStorage.getItem("user")) || {
-        logged: false,
-        cart: { count: 0, items: [] },
-        wishList: { count: 0, items: [] },
-      }
-    );
-  };
   const [user, dispatch] = useReducer(appReducer, {}, init);
 
   useEffect(() => {
-    if (!user) return;
-    localStorage.setItem("user", JSON.stringify(user));
-  }, [user]); 
+    localStorage.setItem(USER_LOCAL_STORAGE_KEY, JSON.stringify(user));
+  }, [user]);
+
   return (
-    <AppContext.Provider
-      value={{
-        user,
-        dispatch,
-      }}
-    >
+    <AppContext.Provider value={{ user, dispatch }}>
       <RouterProvider router={router} />
     </AppContext.Provider>
   );
