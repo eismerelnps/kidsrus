@@ -13,16 +13,17 @@ import AlertDialog from "../feedBack/AlertDialog";
 import { getProductById } from "../../helpers/getProductById";
 import { types } from "../../types/types";
 import { useNavigate } from "react-router-dom";
+import AbstractDialog from "../feedBack/AbstractDialog";
 
 export const Header = () => {
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AppContext);
 
   //console.log(user.wishList.items)
-  const wishListProducts = user.wishList.items.map((id) => getProductById(id)) ;
+  const wishListProducts = user.wishList.items.map((id) => getProductById(id));
   const cartProducts = user.cart.items.map((product) =>
     getProductById(product.id)
-  ) ;
+  );
 
   const [wishList, setWishList] = useState(false);
   const [cart, setCart] = useState(false);
@@ -33,7 +34,7 @@ export const Header = () => {
       payload: {
         cart: { count: 0, items: [] },
         wishList: { count: 0, items: [] },
-      }
+      },
     };
     dispatch(action);
 
@@ -42,8 +43,37 @@ export const Header = () => {
     });
   };
 
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleSignIn = () => {
+    navigate("/signin", {
+      replace: false,
+    });
+  };
+  const buttons = [
+    { text: "Keep me as guest", fun: () => setDialogOpen(false) },
+    { text: "Sign In", fun: () => handleSignIn() },
+  ];
+
+  const handleOpenProducts = ({ type }) => {
+    console.log(type);
+
+    if (!user.logged) {
+      return setDialogOpen(true);
+    }
+    type === "whishList" ? setWishList(true) : setCart(true);
+  };
   return (
     <div className="mb-5">
+      <AbstractDialog
+        title={"You are not signed in"}
+        description={
+          "In order to add products to the shopping cart you must be signed in first, please, sign in and come back"
+        }
+        dialogOpen={dialogOpen}
+        setDialogOpen={setDialogOpen}
+        dialogButtons={buttons}
+      />
       {wishList && (
         <AlertDialog
           title={"Wish List"}
@@ -68,7 +98,7 @@ export const Header = () => {
       <div className="d-flex justify-content-center">
         <i
           className="fa-regular fa-heart p-2 mx-1 color_mate_blue position-relative "
-          onClick={() => setWishList(true)}
+          onClick={() => handleOpenProducts({ type: "wishList" })}
         >
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {user.wishList.count}
@@ -78,7 +108,7 @@ export const Header = () => {
 
         <i
           className="fa-solid fa-cart-shopping p-2 mx-1 color_mate_blue position-relative"
-          onClick={() => setCart(true)}
+          onClick={() => handleOpenProducts({ type: "cart" })}
         >
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {user.cart.count}
