@@ -10,6 +10,7 @@ export const appReducer = (state = {}, action) => {
 
     case types.logout:
       return {
+        ...action.payload,
         logged: false,
       };
 
