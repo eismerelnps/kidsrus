@@ -1,16 +1,14 @@
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
-import CircularProgress from '@mui/material/CircularProgress';
-import Button from '@mui/material/Button';
 
-export default function SimpleBackdrop() {
-  const [open, setOpen] = React.useState(true);
+export default function SimpleBackdrop( {open, setOpen, children} ) {
+  //const [open, setOpen] = React.useState(true);
   const handleClose = () => {
     setOpen(false);
   };
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
   return (
     <div>
@@ -20,7 +18,9 @@ export default function SimpleBackdrop() {
         open={open}
         onClick={handleClose}
       >
-        <CircularProgress color="inherit" />
+      { children}
+        
+      
       </Backdrop>
     </div>
   );
