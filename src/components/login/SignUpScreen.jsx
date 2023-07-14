@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../../app/appContext";
 import { types } from "../../types/types";
 import { useForm } from "../../hooks/useForm";
@@ -19,7 +19,8 @@ export const SignUpScreen = () => {
 
   const { username, password, repassword, email, number } = formValues;
 
-  const url = "https://kidsrus-backend-node.onrender.com/api/v1/users/create-user";
+  const url =
+    "https://kidsrus-backend-node.onrender.com/api/v1/users/create-user";
 
   const navigate = useNavigate();
   const { user, dispatch } = useContext(AppContext);
@@ -49,15 +50,13 @@ export const SignUpScreen = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-       // console.log(data);
-       
-         setOpenDialog(false);
+        // console.log(data);
+
+        setOpenDialog(false);
       })
 
       .then(() => {
-       
-
-        navigate('/signin', {
+        navigate("/signin", {
           replace: true,
         });
       })
@@ -69,7 +68,7 @@ export const SignUpScreen = () => {
 
   return (
     <div className="container text-center">
-     {openDialog && <SimpleBackdrop />}
+      {openDialog && <SimpleBackdrop />}
 
       <h1 className="font_francois_one color_mate_blue">Sign Up</h1>
 
@@ -88,7 +87,7 @@ export const SignUpScreen = () => {
                 onChange={handdleInputChange}
               />
               <input
-              required='true'
+                required="true"
                 type="email"
                 name="email"
                 className="my-3 form-control"
@@ -121,16 +120,28 @@ export const SignUpScreen = () => {
                 value={number}
                 onChange={handdleInputChange}
               />
-                <div className="bg_color_mate_blue p-1 flex-grow-1">
-              <button
-                onClick={() => setOpenDialog(true)}
-                type="submit"
-                className="submit_btn border_white_dashed_own  rounded-0 btn text-light font_francois_one w-100  "
-              >
-                Sign Up
-              </button>
+              <div className="bg_color_mate_blue p-1 flex-grow-1">
+                <button
+                  onClick={() => setOpenDialog(true)}
+                  type="submit"
+                  className="submit_btn border_white_dashed_own  rounded-0 btn text-light font_francois_one w-100  "
+                >
+                  Sign Up
+                </button>
               </div>
             </form>
+
+            <span className="color_light_blue text-decoration-none text-end">
+              Already have an account
+            </span>
+            <br />
+
+            <NavLink
+              className="color_orange text-decoration-none text-end"
+              to={"/signin"}
+            >
+              <span>Sign in</span>
+            </NavLink>
           </div>
         </div>
       </div>

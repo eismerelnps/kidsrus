@@ -6,6 +6,7 @@ import { AddToCart } from "./buttons/AddToCart";
 import { ProductScreenFooter } from "./ProductScreenFooter";
 import { ImageGallery } from "./ImageGallery ";
 import { AddToWishList } from "./buttons/AddToWishList";
+import AlertDialog from "../feedBack/AlertDialog";
 // import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 
 export const ProductScreen = () => {
@@ -34,6 +35,7 @@ export const ProductScreen = () => {
 
   return (
     <>
+    
       <Breadcrumb category={category} title={title} />
       <div className="container text-center">
         <div className="row mt-5 m-">
