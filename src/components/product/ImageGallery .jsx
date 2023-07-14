@@ -7,30 +7,30 @@ import { toLowerCaseTwoFirst } from "../../helpers/toLowerCaseTwoFirst";
 const imageSRC = require.context("../../assets");
 
 export const ImageGallery = ({ basePath = '', images, category, stockAmount }) => {
-  const [zoomStyle, setZoomStyle] = useState(null);
+  // const [zoomStyle, setZoomStyle] = useState(null);
 
-  const handleMouseEnter = () => {
-    //setZoomVisible(true);
-    handleImageZoom();
-  };
+  // const handleMouseEnter = () => {
+  //   //setZoomVisible(true);
+  //   handleImageZoom();
+  // };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const handleImageZoom = () => {
-    imageZoom("myimage", "myresult");
-  };
+  // const handleImageZoom = () => {
+  //   imageZoom("myimage", "myresult");
+  // };
 
-  const handleMouseLeave = () => {
-    setZoomVisible(false);
-    setZoomStyle(null);
-  };
+  // const handleMouseLeave = () => {
+  //   setZoomVisible(false);
+  //   setZoomStyle(null);
+  // };
 
-  const [zoomVisible, setZoomVisible] = useState(true);
+  // const [zoomVisible, setZoomVisible] = useState(true);
 
   //const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index);
-  };
+  // const handleImageClick = (index) => {
+  //   setSelectedImageIndex(index);
+  // };
 
   // Verificar si hay imágenes
   if (!images || images.length === 0) {
@@ -50,7 +50,7 @@ export const ImageGallery = ({ basePath = '', images, category, stockAmount }) =
   return (
     <div>
       <div
-        onMouseLeave={handleMouseLeave}
+       // onMouseLeave={handleMouseLeave}
         className=" img-zoom-container text-center"
       >
         <div className="card border-0 rounded-0">
@@ -60,7 +60,7 @@ export const ImageGallery = ({ basePath = '', images, category, stockAmount }) =
               src={`${basePath}.${largeImage}`}
               alt="large grande"
               className="img-fluid"
-              onClick={handleMouseEnter}
+              //onClick={handleMouseEnter}
             />
             {stockAmount === 0 && (
               <div className="position-absolute top-0 end-0 m-3">
@@ -71,9 +71,9 @@ export const ImageGallery = ({ basePath = '', images, category, stockAmount }) =
             )}
           </div>
         </div>
-        {zoomVisible === true && (
+        {/* {zoomVisible === true && (
           <div id="myresult" className={`img-zoom-result `}></div>
-        )}
+        )} */}
       </div>
 
       <div className="row mt-1">
@@ -92,11 +92,11 @@ export const ImageGallery = ({ basePath = '', images, category, stockAmount }) =
                 )}`}
                 alt={`Imagen ${index + 2}`}
                 className="img-fluid"
-                onClick={() => handleImageClick(index)}
+                //onClick={() => handleImageClick(index)}
               />
-              {zoomStyle && (
+              {/* {zoomStyle && (
                 <div className="zoom-image" style={zoomStyle}></div>
-              )}
+              )} */}
             </div>
           </div>
         ))}

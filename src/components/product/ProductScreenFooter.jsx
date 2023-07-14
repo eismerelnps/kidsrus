@@ -25,84 +25,85 @@ export const ProductScreenFooter = ({
     }
   };
 
-  
-const products =  useMemo(() => getProductByCategory(category), [category]).slice(0, 4);
-
- 
+  const products = useMemo(
+    () => getProductByCategory(category),
+    [category]
+  ).slice(0, 4);
 
   return (
     <div>
       <div className="d-flex justify-content-center">
         <div className="p-4">
-          <div>
-            <button
-              type="button"
-              className={`btn border-0 ${
-                visibleSection === "one" ? "active" : ""
-              }`}
-              onClick={() => handleSetVisible("one")}
-            >
-              <h4 className="font_francois_one color_mate_blue">DESCRIPTION</h4>
-            </button>
-          </div>
-
-          {visibleSection === "one" && (
-            <img
-              src={submark}
-              className="img mb-5"
-              alt="page_mark"
-            />
-          )}
-        </div>
-
-        {stockAmount > 0 && (
-          <div className="p-4">
-            <div>
-              <button
-                type="button"
-                className={`btn border-0 ${
-                  visibleSection === "two" ? "active" : ""
-                }`}
-                onClick={() => handleSetVisible("two")}
-              >
-                <h4 className="font_francois_one color_mate_blue">
-                  ADDITIONAL INFORMATION
-                </h4>
-              </button>
+          <div className="row">
+            <div className="col-12 col-lg-4">
+              <div className=" ">
+                <button
+                  type="button"
+                  className={`btn border-0 ${
+                    visibleSection === "one" ? "active" : ""
+                  }`}
+                  onClick={() => handleSetVisible("one")}
+                >
+                  
+                  <h4 className="font_francois_one color_mate_blue ">
+                    DESCRIPTION
+                  </h4>
+                  
+                 
+                  
+                </button>
+                {visibleSection === "one" && (
+                  <img src={submark} className="img mb-5" alt="page_mark" />
+                )}
+              </div>
             </div>
 
-            {visibleSection === "two" && (
-              <img
-                src={submark}
-                className="img mb-5"
-                alt="page_mark"
-              />
-            )}
-          </div>
-        )}
+            <div className="col-12 col-lg-4">
+              {stockAmount > 0 && (
+                <div className="p-4">
+                  <div>
+                    <button
+                      type="button"
+                      className={`btn border-0 ${
+                        visibleSection === "two" ? "active" : ""
+                      }`}
+                      onClick={() => handleSetVisible("two")}
+                    >
+                      <h4 className="font_francois_one color_mate_blue">
+                        ADDITIONAL INFORMATION
+                      </h4>
+                    </button>
+                  </div>
 
-        <div className="p-4">
-          <div>
-            <button
-              type="button"
-              className={`btn border-0 ${
-                visibleSection === "three" ? "active" : ""
-              }`}
-              onClick={() => handleSetVisible("three")}
-            >
-              <h4 className="font_francois_one color_mate_blue">
-                REVIEWS ({reviews.length})
-              </h4>
-            </button>
-          </div>
+                  {visibleSection === "two" && (
+                    <img src={submark} className="img mb-5" alt="page_mark" />
+                  )}
+                </div>
+              )}
+            </div>
 
-          {visibleSection === "three" && (
-            <img
-              src={submark}
-              className="img mb-5"
-              alt="page_mark"
-            />
-          )}
+            <div className="col-12 col-lg-4">
+              <div className="p-4">
+                <div>
+                  <button
+                    type="button"
+                    className={`btn border-0 ${
+                      visibleSection === "three" ? "active" : ""
+                    }`}
+                    onClick={() => handleSetVisible("three")}
+                  >
+                    <h4 className="font_francois_one color_mate_blue">
+                      REVIEWS ({reviews.length})
+                    </h4>
+                  </button>
+                </div>
+
+                {visibleSection === "three" && (
+                  <img src={submark} className="img mb-5" alt="page_mark" />
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -126,23 +127,15 @@ const products =  useMemo(() => getProductByCategory(category), [category]).slic
 
       <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
         <h4 className="font_francois_one color_mate_blue">RELATED PRODUCTS</h4>
-        <img
-          src={submark}
-          className="img"
-          alt="sub-mark"
-        />
+        <img src={submark} className="img" alt="sub-mark" />
       </div>
 
       <div className="container p-lg-5">
         <div className="row">
-
-       
-{
-  products.map((product) => (
-    <ProductCard key={product.id} {...product} />
-  ))
-}
- </div>
+          {products.map((product) => (
+            <ProductCard key={product.id} {...product} />
+          ))}
+        </div>
         {/* <ProductList category={category} amount={4} size={"col-xl-3"} /> */}
       </div>
     </div>

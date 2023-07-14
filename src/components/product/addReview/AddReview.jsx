@@ -32,12 +32,12 @@ export const AddReview = () => {
       <div className="border_gray_dashed_own p-3">
         <div>
           <p className="font_quicksand color_gray">
-            Your email address will not be published. Required fields are marked
+            Your email address will not be published. <br/> Required fields are marked
             *
           </p>
         </div>
         <div className="d-flex flex-column align-items-start mb-3">
-          <b className="font_quicksand color_mate_blue">Your Rating</b>
+          <b className="font_quicksand color_mate_blue">Your Rating:</b>
           <RatingSubmit max={5} onRatingChange={handleRatingChange} />
         </div>
         <div className="mb-5">
@@ -54,7 +54,7 @@ export const AddReview = () => {
               onChange={handleInputChange}
             />
             <div className="row justify-content-center text-center mb-3">
-              <div className="col-4">
+              <div className="col-lg-4 col-10">
                 <label
                   htmlFor="form_name"
                   className="form-label color_mate_blue"
@@ -74,7 +74,7 @@ export const AddReview = () => {
                   />
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-lg-4 col-10">
                 <label
                   htmlFor="form_email"
                   className="form-label color_mate_blue"

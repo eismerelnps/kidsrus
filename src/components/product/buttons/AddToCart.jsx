@@ -2,10 +2,18 @@ import React, { useContext, useState } from "react";
 import { useForm } from "../../../hooks/useForm";
 import { AppContext } from "../../../app/appContext";
 import { types } from "../../../types/types";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { PrivateRoute } from "../../../routes/PrivateRoute";
+import { SignInScreen } from "../../login/SignInScreen";
+import AlertDialog from "../../feedBack/AlertDialog";
+import { Button } from "@mui/material";
+import AbstractDialog from "../../feedBack/AbstractDialog";
 
 export const AddToCart = () => {
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+
   const { productsId } = useParams();
+  const navigate = useNavigate();
 
   const { user, dispatch } = useContext(AppContext);
 
@@ -20,24 +28,27 @@ export const AddToCart = () => {
   });
 
   const handleAddToCart = (amount) => {
+    if (!user.logged) {
+      return setDialogOpen(true);
+    }
     const productId = productsId;
-  
+
     const existingItem = userCart.items.find((item) => item.id === productId);
-  
+
     if (existingItem) {
       const updatedItems = userCart.items.map((item) =>
         item.id === productId
           ? { ...item, quantity: item.quantity + parseInt(amount) }
           : item
       );
-  
+
       const updatedCount = userCart.count + parseInt(amount);
-  
+
       setUserCart({
         count: updatedCount,
         items: updatedItems,
       });
-  
+
       const updatedUser = {
         ...user,
         cart: {
@@ -45,25 +56,28 @@ export const AddToCart = () => {
           items: updatedItems,
         },
       };
-  
+
       const addToCartAction = {
         type: types.addToCart,
         payload: updatedUser,
       };
-  
+
       dispatch(addToCartAction);
-  
+
       reset();
       //console.log(`Added ${amount} products to cart`);
     } else {
       const updatedCount = parseInt(user.cart.count, 10) + parseInt(amount);
-      const updatedItems = [...userCart.items, { id: productId, quantity: parseInt(amount) }];
-  
+      const updatedItems = [
+        ...userCart.items,
+        { id: productId, quantity: parseInt(amount) },
+      ];
+
       setUserCart({
         count: updatedCount,
         items: updatedItems,
       });
-  
+
       const updatedUser = {
         ...user,
         cart: {
@@ -71,21 +85,39 @@ export const AddToCart = () => {
           items: updatedItems,
         },
       };
-  
+
       const addToCartAction = {
         type: types.addToCart,
         payload: updatedUser,
       };
-  
+
       dispatch(addToCartAction);
-  
+
       reset();
       //console.log(`Added ${amount} products to cart`);
     }
   };
+  const handleSignIn = () => {
+    navigate("/signin", {
+      replace: false,
+    });
+  };
+   const buttons = [
+    { text: "Keep me as guest", fun: () =>  setDialogOpen(false)},
+    { text: "Sign In", fun: () => handleSignIn()},
+  ];
 
   return (
     <div className="d-flex align-items-center">
+      <AbstractDialog
+        title={"You are not signed in"}
+        description={
+          "In order to add products to the shopping cart you must be signed in first, please, sign in and come back"
+        }
+        dialogOpen={dialogOpen}
+        setDialogOpen={setDialogOpen}
+        dialogButtons={buttons}
+      />
       <form className="border-0 rounded-0 mb-3">
         <div className="row align-items-center">
           <div className="col-3">

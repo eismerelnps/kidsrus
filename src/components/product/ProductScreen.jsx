@@ -37,9 +37,10 @@ export const ProductScreen = () => {
     <>
     
       <Breadcrumb category={category} title={title} />
+
       <div className="container text-center">
         <div className="row mt-5 m-">
-          <div className="col-4">
+          <div className="col-lg-4 col-12">
             <ImageGallery
               images={images}
               stockAmount={stockAmount}
@@ -47,7 +48,7 @@ export const ProductScreen = () => {
             />
           </div>
 
-          <div className="col-8">
+          <div className="col-lg-8 col-12 ">
             {newPrice ? (
               <div className="d-flex">
                 <p className="text-start card-text text-decoration-line-through color_light_gray font_francois_one">
@@ -80,11 +81,11 @@ export const ProductScreen = () => {
                   className="list-group-item text-start color_mate_blue "
                 >
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-6 col-lg-4">
                       {" "}
                       <b>SKU:</b>
                     </div>
-                    <div className="col-8">
+                    <div className="col-6 col-lg-8">
                       <b className="w-100 text-end color_gray">{id}</b>
                     </div>
                   </div>
@@ -94,11 +95,11 @@ export const ProductScreen = () => {
                   className="list-group-item text-start color_mate_blue "
                 >
                   <div className="row">
-                    <div className="col-4">
+                    <div className=" col-6 col-lg-4">
                       {" "}
                       <b>Category:</b>
                     </div>
-                    <div className="col-8">
+                    <div className="col-6 col-lg-8 ">
                       <b className="w-100 text-end color_gray">{category}</b>
                     </div>
                   </div>
@@ -108,11 +109,11 @@ export const ProductScreen = () => {
                   className="list-group-item text-start color_mate_blue "
                 >
                   <div className="row">
-                    <div className="col-4">
+                    <div className="col-6 col-lg-4">
                       {" "}
                       <b>Tags:</b>
                     </div>
-                    <div className="col-8">
+                    <div className="col-6 col-lg-8">
                       {" "}
                       <b className="w-100 text-end color_gray font_quicksand">
                         {tags}
