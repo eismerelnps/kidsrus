@@ -1,6 +1,6 @@
 import { products } from "../data/products";
 
-export const getProductByCategory = (category) => {
+export const getProductByCategory = (category, amount) => {
   const validCategories = [
     "For Babies",
     "For Boys",
@@ -12,7 +12,7 @@ export const getProductByCategory = (category) => {
     throw new Error(`${category} is not a valid category`);
   }
 
-  console.log(products.map((item) => item.title));
-
-  return products.filter((product) => product.category === category);
+  return products
+    .filter((product) => product.category === category)
+    .slice(0, amount);
 };
