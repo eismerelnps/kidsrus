@@ -1,9 +1,5 @@
 import { nav } from "../../data/nav";
 import { NavItem } from "./NavItem";
-import logo from "../../assets/main/logo.png";
-//import logo2 from "../../assets/logo.png";
-
-import "./ui.css";
 //import { DrawerAppBar } from "../newArrivals/navbar/DrawerAppBar";
 import { useContext, useState } from "react";
 import { AppContext } from "../../app/appContext";
@@ -12,8 +8,13 @@ import { deepOrange } from "@mui/material/colors";
 import AlertDialog from "../feedBack/AlertDialog";
 import { getProductById } from "../../helpers/getProductById";
 import { types } from "../../types/types";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import AbstractDialog from "../feedBack/AbstractDialog";
+
+import logo from "../../assets/main/logo.png";
+//import logo2 from "../../assets/logo.png";
+
+import "./ui.css";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -92,7 +93,10 @@ export const Header = () => {
       )}
 
       <div className="text-center">
-        <img src={logo} className="img-fluid mb-5" alt="page_logo" />
+        <NavLink to={'/'}>
+        <img src={logo} className="img-fluid mb-5" alt="page_logo"  />
+
+        </NavLink>
       </div>
       <Avatar sx={{ bgcolor: deepOrange[500] }} onClick={handleLogOut}></Avatar>
       <div className="d-flex justify-content-center">
