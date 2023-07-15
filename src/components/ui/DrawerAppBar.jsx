@@ -82,10 +82,10 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
   //all app bar mobile and desktop
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", textAlign: "center", }}>
       <CssBaseline />
       <AppBar
-        sx={{ background: "#fff" }}
+        sx={{ background: "#fff", textAlign: "center", }}
         component="nav"
         position={"static"}
         elevation={0}
@@ -96,7 +96,38 @@ function DrawerAppBar(props) {
           </NavLink>
         </div>
 
-        <Box sx={{ textAlign: "center", marginBottom: "1rem", bgcolor: '#fff' }}>
+      
+     
+{/* 
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+        >
+          MUI
+        </Typography>
+         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: '#29458bda' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>  */}
+
+
+
+        <Toolbar >
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" }, color: "#29458bda" }}
+          >
+            <MenuIcon />
+          </IconButton>
+          
+          <Box sx={{  marginBottom: "1rem", bgcolor: '#fff' }}>
           {/* <Avatar
             sx={{ bgcolor: deepOrange[500] }}
             onClick={handleLogOut}
@@ -167,7 +198,25 @@ function DrawerAppBar(props) {
 
           {/* )} */}
         </Box>
+        
 
+            {/* <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            MUI
+          </Typography> 
+
+          <Box sx={{ display: { xs: 'block', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ bgcolor: '#000', color: 'fff' }}>
+                {item}
+              </Button>
+            ))}
+          </Box> */}
+           
+        </Toolbar>
         <Box
           sx={{
             display: { xs: "none", sm: "block" },
@@ -187,54 +236,9 @@ function DrawerAppBar(props) {
               </button>
             ))} */}
         </Box>
-{/* 
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-        >
-          MUI
-        </Typography>
-         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#29458bda' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>  */}
 
-
-
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "#29458bda" }}
-          >
-            <MenuIcon />
-          </IconButton>
-
-           {/* <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography> 
-
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-           */}
-        </Toolbar>
       </AppBar>
-
+     
       {/* Drawer */}
       <Box component="nav" sx={{ bgcolor: "#ff" }}>
         <Drawer
