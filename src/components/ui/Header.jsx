@@ -15,6 +15,7 @@ import logo from "../../assets/main/logo.png";
 //import logo2 from "../../assets/logo.png";
 
 import "./ui.css";
+import DrawerAppBar from "./DrawerAppBar";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -69,7 +70,7 @@ export const Header = () => {
       <AbstractDialog
         title={"You are not signed in"}
         description={
-          "In order to add products to the shopping cart you must be signed in first, please, sign in and come back"
+          "In order to add products to Cart or Wish List you must be signed in first, please, sign in and come back"
         }
         dialogOpen={dialogOpen}
         setDialogOpen={setDialogOpen}
@@ -92,15 +93,16 @@ export const Header = () => {
         />
       )}
 
-      <div className="text-center">
-        <NavLink to={'/'}>
-        <img src={logo} className="img-fluid mb-5" alt="page_logo"  />
-
-        </NavLink>
-      </div>
-      <Avatar sx={{ bgcolor: deepOrange[500] }} onClick={handleLogOut}></Avatar>
+      
+      <DrawerAppBar 
+      handleLogOut={handleLogOut} 
+      handleOpenProducts={handleOpenProducts}
+      user={user}
+      nav={nav}
+      />
       <div className="d-flex justify-content-center">
-        <i
+        
+        {/* <i
           className="fa-regular fa-heart p-2 mx-1 color_mate_blue position-relative "
           onClick={() => handleOpenProducts({ type: "wishList" })}
         >
@@ -120,15 +122,10 @@ export const Header = () => {
           </span>
         </i>
 
-        <i className="fa-solid fa-magnifying-glass p-2 mx-1 color_mate_blue"></i>
+        <i className="fa-solid fa-magnifying-glass p-2 mx-1 color_mate_blue"></i> */}
         {/* <i class="fa-solid fa-user-tie p-2 mx-1 color_mate_blue"></i> */}
       </div>
-
-      <ul className="nav justify-content-center mb-5 ">
-        {nav.map(({ title, navTo }, index) => (
-          <NavItem key={title} title={title} navTo={navTo} index={index} />
-        ))}
-      </ul>
+     
     </div>
   );
 };
