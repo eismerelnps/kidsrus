@@ -7,7 +7,7 @@ const imagesSRC = require.context("../../../assets");
 
 export const BestSellers = ({ title, products }) => {
   return (
-    <div className="mb-5" style={{ cursor: "pointer" }}>
+    <div className="mb-5 d-none d-lg-block" style={{ cursor: "pointer" }}>
       <h1 className="mb-4 font_francois_one color_mate_blue text-center">{title}</h1>
       <div className="font_francois_one">
         <ul

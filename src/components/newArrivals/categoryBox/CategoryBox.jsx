@@ -9,7 +9,7 @@ export const CategoryBox = () => {
 
  
   return (
-    <div className="mb-5 "
+    <div className="d-none d-lg-block mb-5 "
     style={{cursor: "pointer"}}
 
     >

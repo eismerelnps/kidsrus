@@ -52,6 +52,7 @@ export const Header = () => {
       replace: false,
     });
   };
+  
   const buttons = [
     { text: "Keep me as guest", fun: () => setDialogOpen(false) },
     { text: "Sign In", fun: () => handleSignIn() },
@@ -70,7 +71,7 @@ export const Header = () => {
       <AbstractDialog
         title={"You are not signed in"}
         description={
-          "In order to add products to Cart or Wish List you must be signed in first, please, sign in and come back"
+          "In order to add products to cart or Wish List you must be signed in first, please, sign in and come back"
         }
         dialogOpen={dialogOpen}
         setDialogOpen={setDialogOpen}

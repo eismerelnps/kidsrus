@@ -26,6 +26,7 @@ import logo from "../../assets/main/logo.png";
 import { Menu, MenuItem, Tooltip } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { useState } from "react";
+import { CategoryBox } from "../newArrivals/categoryBox/CategoryBox";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
@@ -67,14 +68,27 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+      {nav.map(({ id, title, navTo }) => (
+        <ListItem key={id} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={title} />
+            </ListItemButton>
+          </ListItem>
+
+            // <Button key={id} sx={{ color: "#29458bda" }}>
+            //   {title}
+            // </Button>
+          ))}
+
+        {/* {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
-        ))}
+        ))} */}
       </List>
+      <CategoryBox />
     </Box>
   );
 
@@ -82,24 +96,23 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
   //all app bar mobile and desktop
   return (
-    <Box sx={{ display: "flex", textAlign: "center", }}>
+    <Box sx={{ display: "flex", textAlign: "center" }}>
       <CssBaseline />
       <AppBar
-        sx={{ background: "#fff", textAlign: "center", }}
+        sx={{ background: "#fff", textAlign: "center" }}
         component="nav"
-        position={"static"}
+        // position={"static"}
         elevation={0}
       >
-        <div className="text-center">
-          <NavLink to={"/"}>
-            <img src={logo} className="img-fluid mb-5" alt="page_logo" />
-          </NavLink>
+        <div className="bg_color_orange">
+          <div className="px-5 text-center">
+            <p className="text-light font_quicksand">
+              20% off all kidswear + free shipping when you spend $60 or more
+            </p>
+          </div>
         </div>
 
-      
-     
-{/* 
-        <Typography
+        {/* <Typography
           variant="h6"
           component="div"
           sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
@@ -112,116 +125,83 @@ function DrawerAppBar(props) {
                 {item}
               </Button>
             ))}
-          </Box>  */}
+          </Box>   */}
 
-
-
-        <Toolbar >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "#29458bda" }}
-          >
-            <MenuIcon />
-          </IconButton>
-          
-          <Box sx={{  marginBottom: "1rem", bgcolor: '#fff' }}>
-          {/* <Avatar
-            sx={{ bgcolor: deepOrange[500] }}
-            onClick={handleLogOut}
-          ></Avatar> */}
-          <Badge badgeContent={user.cart.count} color="primary">
-            <IconButton
-              sx={{ color: "#29458bda", marginLeft: "0.5rem" }}
-              onClick={() => handleOpenProducts({ type: "wishList" })}
-            >
-              <FavoriteBorderIcon />
-            </IconButton>
-          </Badge>
-          <Badge badgeContent={user.wishList.count} sx={{ color: red[500] }}>
-            <IconButton
-              sx={{ color: "#29458bda", marginLeft: "0.5rem" }}
-              onClick={() => handleOpenProducts({ type: "cart" })}
-            >
-              <ShoppingCartIcon />
-            </IconButton>
-          </Badge>
-
-          <IconButton sx={{ color: "#29458bda", marginLeft: "0.5rem" }}>
-            <SearchIcon />
-          </IconButton>
-
-          {user.logged ? (
-            <Tooltip title="Open settings">
+        {/* DeskTop and mobile Toolbar */}
+        
+          <Box sx={{ display: "flex" }}>
+            <Box sx={{ flexBasis: "33.33%" }}>
+              {/* This MenuIcon desapear on sm devices */}
               <IconButton
-                sx={{ color: "#29458bda", marginLeft: "0.5rem", p: 0 }}
-                onClick={handleOpenUserMenu}
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" }, color: "#29458bda" }}
               >
-                <AccountCircleIcon />
+                <MenuIcon />
               </IconButton>
-            </Tooltip>
-          ) : (
-            <NavLink
-              className="color_orange text-decoration-none font_quicksand"
-              to={"/signin"}
-            >
-              Sign In
-            </NavLink>
-          )}
+            </Box>
+            <Box sx={{ flexBasis: "33.33%" }}>
+            
+                <Badge badgeContent={user.cart.count} color="primary">
+                  <IconButton
+                    sx={{ color: "#29458bda", marginLeft: "0.5rem" }}
+                    onClick={() => handleOpenProducts({ type: "wishList" })}
+                  >
+                    <FavoriteBorderIcon />
+                  </IconButton>
+                </Badge>
+                <Badge
+                  badgeContent={user.wishList.count}
+                  sx={{ color: red[500] }}
+                >
+                  <IconButton
+                    sx={{ color: "#29458bda", marginLeft: "0.5rem" }}
+                    onClick={() => handleOpenProducts({ type: "cart" })}
+                  >
+                    <ShoppingCartIcon />
+                  </IconButton>
+                </Badge>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+                <IconButton sx={{ color: "#29458bda", marginLeft: "0.5rem" }}>
+                  <SearchIcon />
+                </IconButton>
+             
+            </Box>
+            <Box sx={{ flexBasis: "33.33%", alignItems : 'stretch' }}>
+             
+                {user.logged ? (
+                  <Tooltip title="Open settings">
+                    <IconButton
+                      sx={{ color: "#29458bda", marginLeft: "0.5rem", p: 0 }}
+                      onClick={handleOpenUserMenu}
+                    >
+                      <AccountCircleIcon />
+                    </IconButton>
+                  </Tooltip>
+                ) : (
+                  <NavLink
+                    className="color_orange text-decoration-none font_quicksand"
+                    to={"/signin"}
+                  >
+                    Sign In
+                  </NavLink>
+                )}
+              </Box>
+            
           </Box>
 
-          {/* )} */}
-        </Box>
+          
+
+       
         
-
-            {/* <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography> 
-
-          <Box sx={{ display: { xs: 'block', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ bgcolor: '#000', color: 'fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box> */}
-           
-        </Toolbar>
+ 
         <Box
           sx={{
             display: { xs: "none", sm: "block" },
             textAlign: "center!important",
-            bgcolor: "#fff"
+            bgcolor: "#fff",
           }}
         >
           {nav.map(({ id, title, navTo }) => (
@@ -230,16 +210,12 @@ function DrawerAppBar(props) {
             </Button>
           ))}
 
-          {/* {navItems.map((item) => (
-              <button key={item} sx={{ color: '#000' }}>
-                {item}
-              </button>
-            ))} */}
-        </Box>
-
+           
+        </Box> 
       </AppBar>
-     
-      {/* Drawer */}
+
+      {/* Content that doesnt stay static drawer */}
+
       <Box component="nav" sx={{ bgcolor: "#ff" }}>
         <Drawer
           container={container}
@@ -262,40 +238,6 @@ function DrawerAppBar(props) {
       </Box>
       <Box component="main" sx={{ p: 3, color: "#000" }}>
         <Toolbar />
-        {/* <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accusamus porro reprehenderit eos inventore facere, fugit, molestiae
-          ab officiis illo voluptates recusandae. Vel dolor nobis eius, ratione atque
-          soluta, aliquam fugit qui iste architecto perspiciatis. Nobis, voluptatem!
-          Cumque, eligendi unde aliquid minus quis sit debitis obcaecati error,
-          delectus quo eius exercitationem tempore. Delectus sapiente, provident
-          corporis dolorum quibusdam aut beatae repellendus est labore quisquam
-          praesentium repudiandae non vel laboriosam quo ab perferendis velit ipsa
-          deleniti modi! Ipsam, illo quod. Nesciunt commodi nihil corrupti cum non
-          fugiat praesentium doloremque architecto laborum aliquid. Quae, maxime
-          recusandae? Eveniet dolore molestiae dicta blanditiis est expedita eius
-          debitis cupiditate porro sed aspernatur quidem, repellat nihil quasi
-          praesentium quia eos, quibusdam provident. Incidunt tempore vel placeat
-          voluptate iure labore, repellendus beatae quia unde est aliquid dolor
-          molestias libero. Reiciendis similique exercitationem consequatur, nobis
-          placeat illo laudantium! Enim perferendis nulla soluta magni error,
-          provident repellat similique cupiditate ipsam, et tempore cumque quod! Qui,
-          iure suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto.
-          Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore commodi
-          reprehenderit rerum reiciendis! Quidem alias repudiandae eaque eveniet
-          cumque nihil aliquam in expedita, impedit quas ipsum nesciunt ipsa ullam
-          consequuntur dignissimos numquam at nisi porro a, quaerat rem repellendus.
-          Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
-          dolores sunt inventore perferendis, aut sapiente modi nesciunt.
-        </Typography> */}
       </Box>
     </Box>
   );
